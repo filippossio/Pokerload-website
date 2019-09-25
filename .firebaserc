@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "pokerload"
+  },
+  "targets": {
+    "pokerload": {
+      "hosting": {
+        "production": [
+          "pokerload"
+        ],
+        "staging": [
+          "development-pokerload"
+        ]
+      }
+    }
+  }
+}

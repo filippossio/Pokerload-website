@@ -1,0 +1,21 @@
+.features-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+
+   .h2 {
+       text-transform: uppercase;
+       margin: 10px 0;
+   }
+   .p {
+       font-size: 1.3rem;
+        margin: 2px 0;
+   }
+
+   .features {
+       display: flex;
+       flex-direction: row;
+   }
+}
