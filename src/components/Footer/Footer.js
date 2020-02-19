@@ -11,15 +11,20 @@ const useStyles = theme => ({
 	footer: {
 		flexGrow: 1,
 		backgroundColor: "#606060",
-		height: "251px",
+
 		padding: "10px 0px",
 	},
 	coloumn: {
 		padding: "10px 80px",
-		borderRight: "2px solid white",
-		"&:last-child": {
-			borderRight: "none",
+		paddingBottom: '40px',
+		[theme.breakpoints.up('md')]: {
+			borderRight: "2px solid white",
+			paddingBottom: '10px',
+			"&:last-child": {
+				borderRight: "none",
+			},
 		},
+
 	},
 	row: {
 		color: "white",
@@ -37,14 +42,23 @@ const useStyles = theme => ({
 		marginBlockEnd: '0.83em',
 		marginInlineStart: '0px',
 		marginInlineEnd: '0px',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '20px',
+		},
 	},
 	p: {
 		margin: "0 0",
-		fontSize: "16px",
+		fontSize: "15px",
 		lineHeight: "19px",
 		fontFamily: "Roboto",
 		width: "100%",
 		color: 'white',
+		[theme.breakpoints.down('sm')]: {
+			// fontSize: '10px',
+		},
+	},
+	pBlack: {
+		color: 'black',
 	},
 	pUppercase: {
 		textTransform: "uppercase",
@@ -52,6 +66,14 @@ const useStyles = theme => ({
 	horizontalLine: {
 		borderTop: "1px solid white",
 		width: "100%",
+	},
+	horizontalLineMobile: {
+		borderTop: "1px solid white",
+		width: "90%",
+		[theme.breakpoints.up('md')]: {
+			display: 'none',
+		}
+
 	},
 	newsletter: {
 		border: '1px solid white',
@@ -75,7 +97,6 @@ const useStyles = theme => ({
 			// marginLeft: '25px',
 			fontSize: '12px',
 			width: '100%',
-
 		}
 	},
 	button: {
@@ -85,23 +106,18 @@ const useStyles = theme => ({
 	pBold: {
 		fontWeight: "bold",
 	},
+
 });
 
-// .yourclass{
-//     border: 1px solid blue;
-// }
-// .yourclass:last-child{
-//     border: 0;
-// }
 
 const footer = (props) => {
 	const { classes } = props;
 	return (
 		<section className={classes.footer} >
 			<Grid container>
-				<Grid item xs={4} className={classes.coloumn}>
+				<Grid item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={`${classes.heading} ${classes.pUppercase}`}>contact us</h2>
-					<Grid container xs={12} className={classes.row}>
+					<Grid container className={classes.row}>
 						<p className={`${classes.p} ${classes.pUppercase}`}>contactus@pokerload.com</p>
 						<hr className={classes.horizontalLine}></hr>
 						<p className={`${classes.p} ${classes.pUppercase}`}>145 GEORGE STREET, G1 1RD, GLASGOW, UK</p>
@@ -111,38 +127,47 @@ const footer = (props) => {
 						<p className={`${classes.p} ${classes.pUppercase}`}>+357 99 740 775 (CY)</p>
 					</Grid>
 				</Grid>
-				<Grid item xs={4} className={classes.coloumn}>
-					<label for="newsletter" className={classes.heading}>SIGN UP</label>
+				<hr className={classes.horizontalLineMobile}></hr>
+				<Grid item xs={12} md={4} className={classes.coloumn}>
+					<label htmlFor="newsletter" className={classes.heading}>SIGN UP</label>
 					<div className={classes.newsletter}>
 						<form action="">
 							<input
-								fullWidth
 								type="email"
 								placeholder="ENTER YOUR EMAIL"
 								id="newsletter"
 							/>
 							<div className={classes.button}>
-								<button className={`${classes.p} ${classes.pBold}`}>Join</button>
+								<button className={`${classes.p} ${classes.pBold} ${classes.pBlack}`}>Join</button>
 							</div>
 						</form>
 					</div>
 					<hr className={classes.horizontalLine}></hr>
 					<p className={classes.p}>By singing up, you have agreed to recieve update emails regarding our services and products</p>
 				</Grid>
-				<Grid item xs={4} className={classes.coloumn}>
+				<hr className={classes.horizontalLineMobile}></hr>
+				<Grid item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={classes.heading}>FIND US</h2>
 					<Grid container>
 						<Grid item xs={3}>
-							<img src={facebookSVG} alt="facebook" />
+							<a href="">
+								<img src={facebookSVG} alt="facebook" />
+							</a>
 						</Grid>
 						<Grid item xs={3}>
-							<img src={instagramSvg} alt="instagram" />
+							<a href="https://www.instagram.com/pokerload/">
+								<img src={instagramSvg} alt="instagram" />
+							</a>
 						</Grid>
 						<Grid item xs={3}>
-							<img src={twitterSvg} alt="twitter" />
+							<a href="">
+								<img src={twitterSvg} alt="twitter" />
+							</a>
 						</Grid>
 						<Grid item xs={3}>
-							<img src={linkedinSvg} alt="linked in" />
+							<a href="">
+								<img src={linkedinSvg} alt="linked in" />
+							</a>
 						</Grid>
 					</Grid>
 				</Grid>

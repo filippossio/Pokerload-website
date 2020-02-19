@@ -1,28 +1,28 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import FeaturesRow from './FeaturesRow/FeaturesRow';
+import HorizontalLine from '../../UI/HorizontalLine/HorizontalLine';
 
-import './Features.scss'
-import Feature from './Feature/Feature'
+const styles = theme => ({
+	container: {
 
-const fetaures = (props) => {
-    let featuresArray = props.features.map((feature, index) =>
-        <Feature
-            index={index}
-            key={index}
-            featureName={feature.name}
-            featureDescription={feature.description}
-            icon={feature.icon} />
-    );
+	},
+});
 
-    return (
-        <section className="features-section">
-            <h2 className="h2">Check out our features</h2>
-            <p className="p">Pokerload is a product that offers casinos and poker players</p>
-            <p className="p">a streamlined poker experiece</p>
-            <div className="features">
-                {featuresArray}
-            </div>
-        </section>
-    );
-}
+const features = (props) => {
+	const { classes, features } = props;
 
-export default fetaures;
+	let body = [];
+	for (let index = 0; index < features.length; index += 2) {
+		body.push(<HorizontalLine />);
+		body.push(<FeaturesRow key={index} index={index} features={[features[index], features[index + 1]]} />);
+	}
+	return (
+		<Container maxWidth='lg' className={classes.container}>
+			{body}
+		</Container>
+	);
+};
+
+export default withStyles(styles)(features);

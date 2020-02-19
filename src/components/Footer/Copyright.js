@@ -10,15 +10,31 @@ const styles = theme => ({
 	},
 	coloumn: {
 		padding: "0 80px",
+		[theme.breakpoints.down('sm')]: {
+			padding: "0",
+		},
+
 	},
 	p: {
 		margin: "0",
 		textTransform: "uppercase",
 		fontFamily: "Roboto",
+		color: 'black',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '0.75rem',
+			textAlign: 'center'
+		},
 	},
 	pBold: {
 		fontWeight: "bold",
 	},
+	pUnderline: {
+		textDecoration: 'underline',
+		display: 'block',
+	},
+	pGray: {
+		color: '#9e9e9e'
+	}
 });
 
 const copyright = (props) => {
@@ -26,14 +42,14 @@ const copyright = (props) => {
 	return (
 		<section className={classes.copyright}>
 			<Grid container>
-				<Grid item xs={4} className={classes.coloumn}>
-					<p className={`${classes.p} ${classes.pBold}`}>pokerload 2019, TLD &#169;</p>
+				<Grid item xs={6} sm={4} className={classes.coloumn}>
+					<p className={`${classes.p} ${classes.pBold}`}>&#169; 2019 pokerload LTD</p>
 				</Grid>
-				<Grid item xs={4} className={classes.coloumn}>
-					<p className={classes.p}>terms and conditions</p>
+				<Grid item xs={6} sm={4} className={classes.coloumn}>
+					<a className={`${classes.p} ${classes.pUnderline} ${classes.pGray}`} href="/terms-and-conditions">terms and conditions</a>
 				</Grid>
-				<Grid item xs={4} className={classes.coloumn}>
-					<p className={classes.p}>Privacy Policy</p>
+				<Grid item xs={12} sm={4} className={classes.coloumn}>
+					<a className={`${classes.p} ${classes.pUnderline} ${classes.pGray}`} href="/privacy-policy">Privacy Policy</a>
 				</Grid>
 			</Grid>
 		</section >
