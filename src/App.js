@@ -22,12 +22,12 @@ class App extends Component {
 	state = {
 		features: [
 			{
-				name: 'find a game',
-				description: 'Join tournaments and cash games, based on your preferences',
+				name: 'find a game near you',
+				description: 'Jump long registration queues, earn hustle-free your early bird bonus and find a game of your preferences.',
 				icon: location,
 			}, {
 				name: 'Organise your game',
-				description: 'Pre-book your seat through online payment.',
+				description: 'Schedule your game and pre-book your seat.',
 				icon: calendar,
 			}, {
 				name: 'Secure online payment',
@@ -39,12 +39,12 @@ class App extends Component {
 				icon: requestGame,
 			}, {
 				name: 'Bankroll management',
-				description: 'Manage your bookings and track your live game performance.',
+				description: 'Track your live earnings and set your fixed monthly budget.',
 				icon: bankroll,
 			},
 			{
 				name: 'Lean the basics',
-				description: 'Gain access to free tutorials on budget management, poker rules and gamble responsibility.',
+				description: 'Gain access to free tutorials on budget management, poker rules and gamble responsibly.',
 				icon: tutorial,
 			}, {
 				name: 'Collect Loyalty points',

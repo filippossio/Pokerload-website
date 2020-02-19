@@ -139,7 +139,7 @@ const header = (props) => {
 	return (
 		<header className={classes.header}>
 			<picture>
-				<source srcset={HeroImageMobile} media="(max-width: 599px)" />
+				<source srcSet={HeroImageMobile} media="(max-width: 599px)" />
 				<img src={HeroImage} alt="" className={classes.hero} />
 			</picture>
 			<div className={classes.heroContent} >
