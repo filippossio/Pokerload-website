@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import HorizontalLine from '../../UI/HorizontalLine/HorizontalLine';
 import icon from '../../assets/pokerload-icons.svg';
 
 

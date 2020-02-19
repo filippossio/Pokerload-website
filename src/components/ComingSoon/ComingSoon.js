@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
-import appStoreSvg from '../../assets/appstore.svg';
-import playStoreSvg from '../../assets/google-play-badge.svg';
 
 const styles = theme => ({
 	comingSoon: {

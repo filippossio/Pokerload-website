@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 
 const styles = theme => ({
 	'hr': {
@@ -8,8 +7,7 @@ const styles = theme => ({
 	},
 });
 
-const horizontalLine = (props) => {
-	const { classes } = props;
+const horizontalLine = () => {
 	return (
 		<div>
 			<hr />
