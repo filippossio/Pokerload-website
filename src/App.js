@@ -44,7 +44,7 @@ class App extends Component {
 			},
 			{
 				name: 'Lean the basics',
-				description: 'Gain access to free tutorials on budget management, poker rules and gamble responsibly.',
+				description: 'Gain access to free tutorials on budget management, poker rules and how to gamble responsibly.',
 				icon: tutorial,
 			}, {
 				name: 'Collect Loyalty points',
