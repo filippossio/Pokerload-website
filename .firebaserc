@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "development-pokerload"
+    "default": "pokerload"
   },
   "targets": {
     "pokerload": {
       "hosting": {
         "production": [
-          "development-pokerload"
+          "pokerload"
         ],
         "staging": [
           "development-pokerload"
