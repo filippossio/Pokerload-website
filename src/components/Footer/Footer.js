@@ -150,7 +150,7 @@ const footer = (props) => {
 					<h2 className={classes.heading}>FIND US</h2>
 					<Grid container>
 						<Grid item xs={3}>
-							<a href="/">
+							<a href="https://www.facebook.com/PokerloadLTD/">
 								<img src={facebookSVG} alt="facebook" />
 							</a>
 						</Grid>
@@ -160,12 +160,12 @@ const footer = (props) => {
 							</a>
 						</Grid>
 						<Grid item xs={3}>
-							<a href="/">
+							<a href="https://twitter.com/pokerload/">
 								<img src={twitterSvg} alt="twitter" />
 							</a>
 						</Grid>
 						<Grid item xs={3}>
-							<a href="/">
+							<a href="https://www.linkedin.com/company/28967506/">
 								<img src={linkedinSvg} alt="linked in" />
 							</a>
 						</Grid>
