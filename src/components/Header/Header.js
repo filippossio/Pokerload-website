@@ -30,6 +30,17 @@ const styles = theme => ({
 			width: '100vw',
 		}
 	},
+	navigation: {
+		paddingTop: '20px',
+		paddingRight: '20px',
+		display: 'flex',
+		justifyContent: 'flex-end',
+		height: '100vh',
+		width: '50vw',
+		position: 'absolute',
+		top: '0px',
+		right: '0px',
+	},
 	headerLogo: {
 		height: '215px',
 		width: '500px',
@@ -110,6 +121,7 @@ const styles = theme => ({
 		'& div': {
 			height: '100%',
 			padding: '15px 75px',
+			borderLeft: '1px solid white',
 			'& div': {
 				[theme.breakpoints.down('xs')]: {
 					display: 'none',
@@ -118,6 +130,7 @@ const styles = theme => ({
 				justifyContent: 'center',
 				alignItems: 'center',
 				padding: '0',
+				borderLeft: '1px solid white',
 			},
 			'& div:first-child': {
 				borderLeft: '1px solid white',
@@ -153,6 +166,12 @@ const header = (props) => {
 					<p className={classes.text4}>Must be 21+ years old to sign up</p>
 				</div>
 			</div>
+			<nav className={classes.navigation}>
+				<a href="/">Contact Us</a>
+				<a href="/">Business</a>
+
+
+			</nav>
 
 			<div className={classes.banner}>
 				<Grid container>
