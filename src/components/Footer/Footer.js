@@ -129,7 +129,7 @@ const footer = (props) => {
 				</Grid>
 				<hr className={classes.horizontalLineMobile}></hr>
 				<Grid item xs={12} md={4} className={classes.coloumn}>
-					<label htmlFor="newsletter" className={classes.heading}>SIGN UP</label>
+					<label id="newsletter" htmlFor="newsletter" className={classes.heading}>SIGN UP</label>
 					<div className={classes.newsletter}>
 						<form action="">
 							<input

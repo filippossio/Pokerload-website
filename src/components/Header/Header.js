@@ -17,18 +17,21 @@ const styles = theme => ({
 		width: '100vw',
 	},
 	heroContent: {
-		paddingTop: '20px',
 		paddingLeft: '20px',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		height: '100vh',
+		height: 'fit-content',
 		width: '50vw',
 		position: 'absolute',
-		top: '0px',
+		top: '20px',
 		[theme.breakpoints.down('xs')]: {
 			width: '100vw',
-		}
+		},
+		[theme.breakpoints.down('sm')]: {
+			top: '50px',
+			paddingTop: '50px',
+		},
 	},
 	headerLogo: {
 		height: '215px',
@@ -90,6 +93,7 @@ const styles = theme => ({
 		'&:hover': {
 			backgroundColor: 'black',
 			borderColor: '#606060',
+			cursor: 'pointer',
 		},
 		'&:focus': {
 			outline: '0',
@@ -110,6 +114,7 @@ const styles = theme => ({
 		'& div': {
 			height: '100%',
 			padding: '15px 75px',
+
 			'& div': {
 				[theme.breakpoints.down('xs')]: {
 					display: 'none',
@@ -118,6 +123,7 @@ const styles = theme => ({
 				justifyContent: 'center',
 				alignItems: 'center',
 				padding: '0',
+				borderLeft: '1px solid white',
 			},
 			'& div:first-child': {
 				borderLeft: '1px solid white',
@@ -135,35 +141,71 @@ const styles = theme => ({
 });
 
 const header = (props) => {
-	const { classes } = props;
-	return (
-		<header className={classes.header}>
-			<picture>
-				<source srcSet={HeroImageMobile} media="(max-width: 599px)" />
-				<img src={HeroImage} alt="" className={classes.hero} />
-			</picture>
-			<div className={classes.heroContent} >
-				<div>
-					<img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} />
-					<h2 className={classes.text1}>Live Games at your fingertips</h2>
-					<h2 className={classes.text2}>Book & Buy-in</h2>
-					<h2 className={classes.text3}>in just a few clicks</h2>
-					<p className={classes.newsletter}>join our newsletter</p>
-					<button className={classes.button}>SIGN UP</button>
-					<p className={classes.text4}>Must be 21+ years old to sign up</p>
-				</div>
-			</div>
+	const { classes, business } = props;
 
-			<div className={classes.banner}>
-				<Grid container>
-					<Grid item sm={3}>1.Download App</Grid>
-					<Grid item sm={3}>2. Register</Grid>
-					<Grid item sm={3}>3. Find your game</Grid>
-					<Grid item sm={3}>4. Book in</Grid>
-				</Grid>
-			</div>
-		</header>
-	);
+	const scrollToNewsletter = () => {
+		var url = window.location.href;
+		window.location.href = url + "#newsletter";
+	};
+	if (!business) {
+		return (
+			<header className={classes.header}>
+				<picture>
+					<source srcSet={HeroImageMobile} media="(max-width: 599px)" />
+					<img src={HeroImage} alt="" className={classes.hero} />
+				</picture>
+				<div className={classes.heroContent} >
+					<div>
+						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
+						<h2 className={classes.text1}>Live Games at your fingertips</h2>
+						<h2 className={classes.text2}>Book & Buy-in</h2>
+						<h2 className={classes.text3}>in just a few clicks</h2>
+						<p className={classes.newsletter}>join our newsletter</p>
+						<button className={classes.button} onClick={scrollToNewsletter}>SIGN UP</button>
+						<p className={classes.text4}>Must be 21+ years old to sign up</p>
+					</div>
+				</div>
+				<div className={classes.banner}>
+					<Grid container>
+						<Grid item sm={3}>1.Download App</Grid>
+						<Grid item sm={3}>2. Register</Grid>
+						<Grid item sm={3}>3. Find your game</Grid>
+						<Grid item sm={3}>4. Book in</Grid>
+					</Grid>
+				</div>
+			</header>
+		);
+	}
+	else {
+		return (
+			<header className={classes.header}>
+				<picture>
+					<source srcSet={HeroImageMobile} media="(max-width: 599px)" />
+					<img src={HeroImage} alt="" className={classes.hero} />
+				</picture>
+				<div className={classes.heroContent} >
+					<div>
+						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
+						<h2 className={classes.text1}>Raise your live game</h2>
+						<h2 className={classes.text2}>CRM & Marketing platform</h2>
+						<h2 className={classes.text3}>for all licenced poker venues</h2>
+						<p className={classes.newsletter} style={{ paddingTop: '20px' }}>for more info contact us</p>
+						<p className={classes.text4} style={{ marginTop: '0px' }}>at <a target="_blank" href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">Business@pokerload.com</a></p>
+						<button className={classes.button} onClick={scrollToNewsletter}>SIGN UP</button>
+						<p className={classes.text4}>Must be 21+ years old to sign up</p>
+					</div>
+				</div>
+				<div className={classes.banner}>
+					<Grid container>
+						<Grid item sm={3}>Promote</Grid>
+						<Grid item sm={3}>Organise</Grid>
+						<Grid item sm={3}>Monitor</Grid>
+						<Grid item sm={3}>Automate</Grid>
+					</Grid>
+				</div>
+			</header >
+		);
+	}
 };
 
 export default withStyles(styles)(header);;;;;;;;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-import Aux from './hoc/Aux';
+import {
+	BrowserRouter as Router, Switch, Route
+} from "react-router-dom";
 import './App.scss';
 import Header from './components/Header/Header';
 import Features from './components/Features/Features';
@@ -55,21 +56,84 @@ class App extends Component {
 				description: 'Request a taxi at your current location for your chosen destination directly through the app.',
 				icon: taxi,
 			},
+		],
+		featuresBusiness: [
+			{
+				name: 'Client Management',
+				description: 'Gain live status and management of the daily tables and attendants.',
+				icon: location,
+			}, {
+				name: 'Automate customer service desk',
+				description: 'Release pressure bottleneck game registration hours via the autmated player registration, payment and table allocation.',
+				icon: calendar,
+			}, {
+				name: 'Promote your games',
+				description: 'Showcase poker games to a larger and targeted audience.',
+				icon: payment,
+			}, {
+				name: 'Notify nearby customers',
+				description: 'Draw players to the casino\'s doorstep through targeted pushed notification.',
+				icon: requestGame,
+			}, {
+				name: 'Enlarge your customer pool',
+				description: 'Allow players to group-up and send requests for higher stakes cash games.',
+				icon: bankroll,
+			},
+			{
+				name: 'Customer satisfuction',
+				description: 'Enhance customer retension via customer feedback and behaviour analysis',
+				icon: tutorial,
+			}, {
+				name: 'Easy and secure payments',
+				description: 'Recieve fast and secure world-wide payments from an all major foreign back cards.',
+				icon: loyalty,
+			}, {
+				name: 'Easy and secure access',
+				description: 'Access our user-friendly and secure platform from any computer or mobile device found in the poker venue.',
+				icon: taxi,
+			}, {
+				name: 'Showcase casino services',
+				description: 'Advertise and sell your exclusive services through Pokerload\'s customer loyalty rewards system.',
+				icon: taxi,
+			},
 		]
 	};
 
 	render() {
 		return (
-			<Aux>
-				<Header />
-				<Pokerload />
-				<Features features={this.state.features} />
-				<ComingSoon />
-				<Footer />
-				<Copyright />
-			</Aux>
+			<Router>
+				<nav className="navigation">
+					<Router>
+						<a href="/business">Business</a>
+						<a href="/contact-us">Contact Us</a>
+
+					</Router>
+
+				</nav>
+				<Switch>
+					<Route path="/business">
+						<Header business />
+						<Pokerload />
+						<Features features={this.state.features} />
+						<Footer />
+						<Copyright />
+
+					</Route>
+					<Route path="/contact-us">
+						<h1>This is the contac us</h1>
+					</Route>
+					<Route path="/">
+						<Header />
+						<Pokerload />
+						<Features features={this.state.features} />
+						<ComingSoon />
+						<Footer />
+						<Copyright />
+					</Route>
+				</Switch>
+			</ Router >
 		);
 	}
 }
 
-export default App;
+export default App;;
