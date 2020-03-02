@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
-	BrowserRouter as Router, Switch, Route, Link
+	BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
-import Aux from './hoc/Aux';
 import './App.scss';
 import Header from './components/Header/Header';
 import Features from './components/Features/Features';
