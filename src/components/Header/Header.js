@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-	BrowserRouter as Router, Switch, Route, Link
-} from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import HeroImage from '../../assets/heroImage.png';
 import HeroImageMobile from '../../assets/heroImageMobile.png';
