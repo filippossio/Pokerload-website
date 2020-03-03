@@ -149,22 +149,22 @@ const footer = (props) => {
 				<Grid item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={classes.heading}>FIND US</h2>
 					<Grid container>
-						<Grid item xs={3}>
+						<Grid style={{ paddingBottom: '10px' }} item xs={3} md={6} lg={3}>
 							<a href="https://www.facebook.com/PokerloadLTD/">
 								<img src={facebookSVG} target="_blank" alt="facebook" />
 							</a>
 						</Grid>
-						<Grid item xs={3}>
+						<Grid style={{ paddingBottom: '10px' }} item xs={3} md={6} lg={3}>
 							<a href="https://www.instagram.com/pokerload/">
 								<img src={instagramSvg} target="_blank" alt="instagram" />
 							</a>
 						</Grid>
-						<Grid item xs={3}>
+						<Grid style={{ paddingBottom: '10px' }} item xs={3} md={6} lg={3}>
 							<a href="https://twitter.com/pokerload/">
 								<img src={twitterSvg} target="_blank" alt="twitter" />
 							</a>
 						</Grid>
-						<Grid item xs={3}>
+						<Grid style={{ paddingBottom: '10px' }} item xs={3} md={6} lg={3}>
 							<a href="https://www.linkedin.com/company/28967506/">
 								<img src={linkedinSvg} target="_blank" alt="linked in" />
 							</a>
