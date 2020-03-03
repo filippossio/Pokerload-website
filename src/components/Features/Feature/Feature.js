@@ -39,7 +39,6 @@ const styles = theme => ({
 
 const feature = (props) => {
 	const { classes, feature } = props;
-	console.log(feature);
 	return (
 		<Container className={classes.container}>
 			<img className={classes.icon} src={feature.icon} alt="" />

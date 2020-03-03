@@ -20,7 +20,8 @@
   height: fit-content;
   text-transform: uppercase;
 
-  a {
+  a,
+  span {
     height: fit-content;
     text-decoration: none;
     border-left: 1px solid white;
@@ -42,7 +43,8 @@
     padding-top: 0px;
     background-color: #9d9b9b57;
 
-    a {
+    a,
+    span {
       color: black;
       border-left: 1px solid black;
       margin: 10px 0;
