@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
 	BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
+
 import './App.scss';
 import Header from './components/Header/Header';
 import Features from './components/Features/Features';
@@ -114,7 +115,7 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<nav className="navigation">
+				<nav className={`navigation ${window.location.pathname === "/business" && "dark"}`}>
 					<Router>
 						<a href="/business">Business</a>
 						<span onClick={this.scroll} >Contact Us</span>
@@ -127,10 +128,6 @@ class App extends Component {
 						<Features features={this.state.featuresBusiness} />
 						<Footer />
 						<Copyright />
-
-					</Route>
-					<Route path="/contact-us">
-						<h1>This is the contac us</h1>
 					</Route>
 					<Route path="/">
 						<Header />
@@ -146,4 +143,4 @@ class App extends Component {
 	}
 }
 
-export default App;;
+export default App;

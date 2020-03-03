@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import HeroImage from '../../assets/heroImage.png';
+import HeroImageBusiness from '../../assets/gray_background.png';
 import HeroImageMobile from '../../assets/heroImageMobile.png';
 import HeaderLogo from '../../assets/logo.svg';
 import Grid from '@material-ui/core/Grid';
@@ -186,8 +187,8 @@ const header = (props) => {
 		return (
 			<header className={classes.header}>
 				<picture>
-					<source srcSet={HeroImageMobile} media="(max-width: 599px)" />
-					<img src={HeroImage} alt="" className={classes.hero} />
+					<source srcSet={HeroImageBusiness} media="(max-width: 599px)" />
+					<img src={HeroImageBusiness} alt="" className={classes.hero} />
 				</picture>
 				<div className={classes.heroContent} >
 					<div>
