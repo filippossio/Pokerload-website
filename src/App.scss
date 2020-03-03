@@ -35,38 +35,45 @@ html {
       cursor: pointer;
       color: gray;
     }
-    &:last-of-type {
-      border-right: 1px solid white;
-    }
+  }
+  span {
+    border-right: 1px solid white;
   }
   @media (max-width: 599px) {
     width: 100vw;
     justify-content: center;
     padding-right: 0px;
     padding-top: 0px;
-    background-color: #9d9b9b57;
+    background-color: #ffffff57;
 
     a,
     span {
       color: black;
       border-left: 1px solid black;
       margin: 10px 0;
-      &:last-of-type {
-        border-right: 1px solid black;
-      }
+    }
+    span {
+      border-right: 1px solid black;
     }
   }
-  // [theme.breakpoints.down('sm')]: {
-  // 	width: '100vw',
-  // 	justifyContent: 'center',
-  // 	paddingRight: '0px',
-  // 	backgroundColor: '#9d9b9b57',
-  // 	paddingTop: '0px',
-  // 	'& a': {
-  // 		color: 'black',
-  // 		margin: '10px',
-  // 	}
-  // }
+}
+.dark {
+  a,
+  span {
+    border-left: 1px solid black;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      color: gray;
+    }
+  }
+  span {
+    border-right: 1px solid black;
+  }
+  @media (max-width: 599px) {
+    background-color: #0000007d;
+  }
 }
 .dark {
   a,

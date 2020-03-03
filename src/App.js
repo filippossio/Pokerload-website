@@ -117,6 +117,7 @@ class App extends Component {
 			<Router>
 				<nav className={`navigation ${window.location.pathname === "/business" && "dark"}`}>
 					<Router>
+						<a href="/">Home</a>
 						<a href="/business">Business</a>
 						<span onClick={this.scroll} >Contact Us</span>
 					</Router>
