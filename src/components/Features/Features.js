@@ -14,7 +14,6 @@ const features = (props) => {
 	const { classes, features } = props;
 	let body = features.map((feature, index, elements) => {
 		if (index % 2 === 0) {
-			console.log([feature, elements[index + 1]]);
 			return (
 				<div key={index}>
 					<HorizontalLine index={index} />
