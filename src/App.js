@@ -117,8 +117,7 @@ class App extends Component {
 				<nav className="navigation">
 					<Router>
 						<a href="/business">Business</a>
-						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-						<a onClick={this.scroll} >Contact Us</a>
+						<span onClick={this.scroll} >Contact Us</span>
 					</Router>
 				</nav>
 				<Switch>
