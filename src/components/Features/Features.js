@@ -17,7 +17,7 @@ const features = (props) => {
 			return (
 				<div key={index}>
 					<HorizontalLine index={index} />
-					<FeaturesRow index={index} features={[features[index], features[index + 1]]} />
+					<FeaturesRow index={index} features={[feature, elements[index + 1]]} />
 				</div>
 			);
 		}
