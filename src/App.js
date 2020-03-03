@@ -107,16 +107,18 @@ class App extends Component {
 		]
 	};
 
+	scroll = () => {
+		window.document.getElementById('newsletter').scrollIntoView();
+	};
+
 	render() {
 		return (
 			<Router>
 				<nav className="navigation">
 					<Router>
 						<a href="/business">Business</a>
-						<a href="/contact-us">Contact Us</a>
-
+						<a onClick={this.scroll} >Contact Us</a>
 					</Router>
-
 				</nav>
 				<Switch>
 					<Route path="/business">

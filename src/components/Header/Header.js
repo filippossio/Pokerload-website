@@ -151,8 +151,7 @@ const header = (props) => {
 	const { classes, business } = props;
 
 	const scrollToNewsletter = () => {
-		var url = window.location.href;
-		window.location.href = url + "#newsletter";
+		window.document.getElementById('newsletter').scrollIntoView();
 	};
 	if (!business) {
 		return (
@@ -203,8 +202,6 @@ const header = (props) => {
 								href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">
 								Business@pokerload.com</a>
 						</p>
-						<button className={classes.button} onClick={scrollToNewsletter}>SIGN UP</button>
-						<p className={classes.text4}>Must be 21+ years old to sign up</p>
 					</div>
 				</div>
 				<div className={classes.banner}>
