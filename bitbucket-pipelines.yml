@@ -16,9 +16,9 @@ pipelines:
             - npm install
             - npm install -g firebase-tools
             - npm run build
-            - firebase deploy
-            - echo "Deployed to production enviroment -> https://pokerload.firebaseapp.com/"
-    staging:
+            - firebase deploy --only hosting:production-pokerload
+            - echo "Deployed to production enviroment -> https://pokerload.com/"
+    developemnt:
       - step:
           deployment: staging
           caches:
@@ -27,5 +27,5 @@ pipelines:
             - npm install
             - npm install -g firebase-tools
             - npm run build
-            - firebase deploy --only hosting:staging --token=$FIREBASE_TOKEN --project pokerload --non-interactive
-            - echo "Deployed to staging enviroment -> https://development-pokerload.firebaseapp.com"
+            - firebase deploy --only hosting:staging-pokerload
+            - echo "Deployed to staging enviroment -> https://staging.pokerload.com"
