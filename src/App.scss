@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .app {
   font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
 }
@@ -64,4 +67,19 @@
   // 		margin: '10px',
   // 	}
   // }
+}
+.dark {
+  a,
+  span {
+    border-left: 1px solid black;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      color: gray;
+    }
+    &:last-of-type {
+      border-right: 1px solid black;
+    }
+  }
 }
