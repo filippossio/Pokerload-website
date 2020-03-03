@@ -12,10 +12,13 @@ const styles = theme => ({
 
 const featuresRow = (props) => {
 	const { classes, features, index } = props;
+
 	return (
 		<Container className={classes.container}>
 			<Feature key={index} feature={features[0]} />
-			<Feature key={index + 1} feature={features[1]} />
+			{features[1] &&
+				<Feature key={index + 1} feature={features[1]} />
+			}
 		</Container>
 	);
 };

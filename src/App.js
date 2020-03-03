@@ -18,6 +18,15 @@ import bankroll from './assets/bankroll.svg';
 import tutorial from './assets/tutorial.svg';
 import taxi from './assets/taxi.svg';
 import loyalty from './assets/loyalty.svg';
+import clientManagment from './assets/pokerloadIcons/customer_management.svg';
+import serviceDesk from './assets/pokerloadIcons/service_desk.svg';
+import promoteGame from './assets/pokerloadIcons/promote_game.svg';
+import notify from './assets/pokerloadIcons/notify.svg';
+import customerPool from './assets/pokerloadIcons/customer_pool.svg';
+import customerSatisfaction from './assets/pokerloadIcons/customer_satisfaction.svg';
+import card from './assets/pokerloadIcons/card.svg';
+import easySecure from './assets/pokerloadIcons/easy_secure.svg';
+import casinoServices from './assets/pokerloadIcons/casino_services.svg';
 
 class App extends Component {
 	state = {
@@ -61,40 +70,39 @@ class App extends Component {
 			{
 				name: 'Client Management',
 				description: 'Gain live status and management of the daily tables and attendants.',
-				icon: location,
+				icon: clientManagment,
 			}, {
 				name: 'Automate customer service desk',
 				description: 'Release pressure bottleneck game registration hours via the autmated player registration, payment and table allocation.',
-				icon: calendar,
+				icon: serviceDesk,
 			}, {
 				name: 'Promote your games',
 				description: 'Showcase poker games to a larger and targeted audience.',
-				icon: payment,
+				icon: promoteGame,
 			}, {
 				name: 'Notify nearby customers',
 				description: 'Draw players to the casino\'s doorstep through targeted pushed notification.',
-				icon: requestGame,
+				icon: notify,
 			}, {
 				name: 'Enlarge your customer pool',
 				description: 'Allow players to group-up and send requests for higher stakes cash games.',
-				icon: bankroll,
-			},
-			{
+				icon: customerPool,
+			}, {
 				name: 'Customer satisfuction',
 				description: 'Enhance customer retension via customer feedback and behaviour analysis',
-				icon: tutorial,
+				icon: customerSatisfaction,
 			}, {
 				name: 'Easy and secure payments',
 				description: 'Recieve fast and secure world-wide payments from an all major foreign back cards.',
-				icon: loyalty,
+				icon: card,
 			}, {
 				name: 'Easy and secure access',
 				description: 'Access our user-friendly and secure platform from any computer or mobile device found in the poker venue.',
-				icon: taxi,
+				icon: easySecure,
 			}, {
 				name: 'Showcase casino services',
 				description: 'Advertise and sell your exclusive services through Pokerload\'s customer loyalty rewards system.',
-				icon: taxi,
+				icon: casinoServices,
 			},
 		]
 	};
@@ -114,7 +122,7 @@ class App extends Component {
 					<Route path="/business">
 						<Header business />
 						<Pokerload />
-						<Features features={this.state.features} />
+						<Features features={this.state.featuresBusiness} />
 						<Footer />
 						<Copyright />
 
@@ -136,4 +144,4 @@ class App extends Component {
 	}
 }
 
-export default App;;
+export default App;
