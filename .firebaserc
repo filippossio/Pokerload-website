@@ -5,11 +5,11 @@
   "targets": {
     "pokerload": {
       "hosting": {
-        "production": [
-          "pokerload"
+        "staging-pokerload": [
+          "staging-pokerload"
         ],
-        "staging": [
-          "development-pokerload"
+        "production-pokerload": [
+          "pokerload"
         ]
       }
     }
