@@ -12,12 +12,20 @@ const styles = theme => ({
 
 const features = (props) => {
 	const { classes, features } = props;
-
-	let body = [];
-	for (let index = 0; index < features.length; index += 2) {
-		body.push(<HorizontalLine />);
-		body.push(<FeaturesRow key={index} index={index} features={[features[index], features[index + 1]]} />);
-	}
+	let body = features.map((feature, index, elements) => {
+		if (index % 2 === 0) {
+			console.log([feature, elements[index + 1]]);
+			return (
+				<div key={index}>
+					<HorizontalLine index={index} />
+					{
+						elements[index + 1] ? <FeaturesRow index={index} features={[feature, elements[index + 1] || null]} /> : <FeaturesRow index={index} features={[feature]} />
+					}
+				</div>
+			);
+		}
+		return '';
+	});
 	return (
 		<Container maxWidth='lg' className={classes.container}>
 			{body}
