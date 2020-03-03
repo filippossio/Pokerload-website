@@ -138,6 +138,13 @@ const styles = theme => ({
 			fontSize: '0.8rem',
 		},
 	},
+	mailTo: {
+		textDecoration: 'underline',
+		color: 'white',
+		'&:hover': {
+			color: 'gray',
+		}
+	},
 });
 
 const header = (props) => {
@@ -190,7 +197,7 @@ const header = (props) => {
 						<h2 className={classes.text2}>CRM & Marketing platform</h2>
 						<h2 className={classes.text3}>for all licenced poker venues</h2>
 						<p className={classes.newsletter} style={{ paddingTop: '20px' }}>for more info contact us</p>
-						<p className={classes.text4} style={{ marginTop: '0px' }}>at <a target="_blank" href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">Business@pokerload.com</a></p>
+						<p className={classes.text4} style={{ marginTop: '0px' }}>at <a className={classes.mailTo} target="_blank" href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">Business@pokerload.com</a></p>
 						<button className={classes.button} onClick={scrollToNewsletter}>SIGN UP</button>
 						<p className={classes.text4}>Must be 21+ years old to sign up</p>
 					</div>
