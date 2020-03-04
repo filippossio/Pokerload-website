@@ -18,14 +18,14 @@ const styles = theme => ({
 		width: '100vw',
 	},
 	heroContent: {
-		paddingLeft: '7%',
+		paddingLeft: '20px',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		height: 'fit-content',
 		width: '50vw',
 		position: 'absolute',
-		top: '5%',
+		top: '20px',
 		[theme.breakpoints.down('xs')]: {
 			width: '100vw',
 		},
@@ -37,7 +37,7 @@ const styles = theme => ({
 	headerLogo: {
 		height: '215px',
 		width: '500px',
-		marginTop: '10%',
+		marginTop: '10px',
 		[theme.breakpoints.down('sm')]: {
 			height: '170px',
 			width: '300px',
@@ -47,7 +47,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: 'white',
-		margin: '3% 0 7% 0',
+		margin: '1% 0 7% 0',
 		fontStyle: 'italic',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
@@ -57,7 +57,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: '#bb001f',
-		margin: '5% 0',
+		margin: '10px 0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
 		}
@@ -84,13 +84,13 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1rem',
 		color: 'white',
-		marginTop: '40px',
+		marginTop: '20px',
 	},
 	newsletter: {
 		fontWeight: 'bold',
 		fontSize: '1.2rem',
 		color: '#bb001f',
-		margin: '20px 0 10px 0',
+		margin: '10px 0',
 		textAlign: 'left',
 	},
 	button: {
