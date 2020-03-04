@@ -37,7 +37,7 @@ const styles = theme => ({
 	headerLogo: {
 		height: '215px',
 		width: '500px',
-		marginTop: '10%',
+		marginTop: '10px',
 		[theme.breakpoints.down('sm')]: {
 			height: '170px',
 			width: '300px',
@@ -47,7 +47,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: 'white',
-		margin: '3% 0 7% 0',
+		margin: '1% 0 7% 0',
 		fontStyle: 'italic',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
