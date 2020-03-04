@@ -18,14 +18,14 @@ const styles = theme => ({
 		width: '100vw',
 	},
 	heroContent: {
-		paddingLeft: '20px',
+		paddingLeft: '7%',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		height: 'fit-content',
 		width: '50vw',
 		position: 'absolute',
-		top: '20px',
+		top: '5%',
 		[theme.breakpoints.down('xs')]: {
 			width: '100vw',
 		},
@@ -37,16 +37,27 @@ const styles = theme => ({
 	headerLogo: {
 		height: '215px',
 		width: '500px',
+		marginTop: '10%',
 		[theme.breakpoints.down('sm')]: {
 			height: '170px',
 			width: '300px',
+		}
+	},
+	text0: {
+		fontWeight: 'bold',
+		fontSize: '1.5rem',
+		color: 'white',
+		margin: '0 0 7% 0',
+		fontStyle: 'italic',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '1.2rem',
 		}
 	},
 	text1: {
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: '#bb001f',
-		margin: '10px 0',
+		margin: '5% 0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
 		}
@@ -73,13 +84,13 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1rem',
 		color: 'white',
-		marginTop: '20px',
+		marginTop: '40px',
 	},
 	newsletter: {
 		fontWeight: 'bold',
 		fontSize: '1.2rem',
 		color: '#bb001f',
-		margin: '10px 0',
+		margin: '20px 0 10px 0',
 		textAlign: 'left',
 	},
 	button: {
@@ -164,7 +175,7 @@ const header = (props) => {
 				<div className={classes.heroContent} >
 					<div>
 						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
-						<h2 className={classes.text1}>Live Games at your fingertips</h2>
+						<h2 className={classes.text1}>Live Games at your fingertips!</h2>
 						<h2 className={classes.text2}>Book & Buy-in</h2>
 						<h2 className={classes.text3}>in just a few clicks</h2>
 						<p className={classes.newsletter}>join our newsletter</p>
@@ -174,7 +185,7 @@ const header = (props) => {
 				</div>
 				<div className={classes.banner}>
 					<Grid container>
-						<Grid item sm={3}>1.Download App</Grid>
+						<Grid item sm={3}>1. Download App</Grid>
 						<Grid item sm={3}>2. Register</Grid>
 						<Grid item sm={3}>3. Find your game</Grid>
 						<Grid item sm={3}>4. Book in</Grid>
@@ -193,12 +204,14 @@ const header = (props) => {
 				<div className={classes.heroContent} >
 					<div>
 						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
-						<h2 className={classes.text1}>Raise your live game</h2>
-						<h2 className={classes.text2}>CRM & Marketing platform</h2>
-						<h2 className={classes.text3}>for all licenced poker venues</h2>
+						<h2 className={classes.text0}>"We bring palyers closer to you"</h2>
+						<h2 className={classes.text1}>Raise your live game!</h2>
+						<h2 className={classes.text2} style={{ color: 'black' }}>CRM & Marketing platform</h2>
+						<h2 className={classes.text3} style={{ color: 'black' }}>for all licenced poker venues</h2>
 						<p className={classes.newsletter} style={{ paddingTop: '20px' }}>for more info contact us</p>
-						<p className={classes.text4} style={{ marginTop: '0px' }}>
+						<p className={classes.text4} style={{ marginTop: '0px', color: 'black' }}>
 							at <a className={classes.mailTo}
+								style={{ color: 'black' }}
 								target="_blank"
 								href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">
 								Business@pokerload.com</a>
