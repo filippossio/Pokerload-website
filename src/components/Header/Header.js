@@ -47,7 +47,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: 'white',
-		margin: '1% 0 7% 0',
+		margin: '1% 0 6% 0',
 		fontStyle: 'italic',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
@@ -175,7 +175,7 @@ const header = (props) => {
 				<div className={classes.heroContent} >
 					<div>
 						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
-						<h2 className={classes.text1}>Live Games at your fingertips!</h2>
+						<h2 className={classes.text1}>Live Games at your fingertips</h2>
 						<h2 className={classes.text2}>Book & Buy-in</h2>
 						<h2 className={classes.text3}>in just a few clicks</h2>
 						<p className={classes.newsletter}>join our newsletter</p>
@@ -205,7 +205,7 @@ const header = (props) => {
 					<div>
 						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
 						<h2 className={classes.text0}>"We bring palyers closer to you"</h2>
-						<h2 className={classes.text1}>Raise your live game!</h2>
+						<h2 className={classes.text1}>Raise your live game</h2>
 						<h2 className={classes.text2} style={{ color: 'black' }}>CRM & Marketing platform</h2>
 						<h2 className={classes.text3} style={{ color: 'black' }}>for all licenced poker venues</h2>
 						<p className={classes.newsletter} style={{ paddingTop: '20px' }}>for more info contact us</p>
