@@ -18,14 +18,14 @@ const styles = theme => ({
 		width: '100vw',
 	},
 	heroContent: {
-		paddingLeft: '7%',
+		paddingLeft: '20px',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		height: 'fit-content',
 		width: '50vw',
 		position: 'absolute',
-		top: '5%',
+		top: '20px',
 		[theme.breakpoints.down('xs')]: {
 			width: '100vw',
 		},
@@ -57,7 +57,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: '#bb001f',
-		margin: '5% 0',
+		margin: '10px 0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
 		}
