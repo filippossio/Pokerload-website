@@ -73,8 +73,8 @@ class App extends Component {
 				description: 'Gain live status and management of the daily tables and attendants.',
 				icon: clientManagment,
 			}, {
-				name: 'Automate customer service desk',
-				description: 'Release pressure bottleneck game registration hours via the autmated player registration, payment and table allocation.',
+				name: 'Automated customer service desk',
+				description: 'Release pressure during bottleneck game registration hours via the automated player registration, payment and table allocation.',
 				icon: serviceDesk,
 			}, {
 				name: 'Promote your games',
@@ -82,7 +82,7 @@ class App extends Component {
 				icon: promoteGame,
 			}, {
 				name: 'Notify nearby customers',
-				description: 'Draw players to the casino\'s doorstep through targeted pushed notification.',
+				description: 'Draw players to the casino\'s doorstep through targeted pushed notifications.',
 				icon: notify,
 			}, {
 				name: 'Enlarge your customer pool',
@@ -90,7 +90,7 @@ class App extends Component {
 				icon: customerPool,
 			}, {
 				name: 'Customer satisfuction',
-				description: 'Enhance customer retension via customer feedback and behaviour analysis',
+				description: 'Enhance customer retension via customer feedback and behaviour analysis.',
 				icon: customerSatisfaction,
 			}, {
 				name: 'Easy and secure payments',
