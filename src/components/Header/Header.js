@@ -47,7 +47,7 @@ const styles = theme => ({
 		fontWeight: 'bold',
 		fontSize: '1.5rem',
 		color: 'white',
-		margin: '0 0 7% 0',
+		margin: '3% 0 7% 0',
 		fontStyle: 'italic',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
