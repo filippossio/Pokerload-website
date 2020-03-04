@@ -18,7 +18,7 @@ pipelines:
             - npm run build
             - firebase deploy --only hosting:production-pokerload
             - echo "Deployed to production enviroment -> https://pokerload.com/"
-    developemnt:
+    staging:
       - step:
           deployment: staging
           caches:
