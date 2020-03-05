@@ -45,6 +45,9 @@ const styles = theme => ({
 		'@media(max-height: 700px)': {
 			height: '170px',
 		},
+		'@media(max-height: 500px)': {
+			height: '130px',
+		},
 	},
 	text0: {
 		fontWeight: 'bold',
@@ -63,7 +66,10 @@ const styles = theme => ({
 		margin: '10px 0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '1.2rem',
+		},
 	},
 	text2: {
 		fontWeight: 'bold',
@@ -72,7 +78,10 @@ const styles = theme => ({
 		margin: '0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.8rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '2.2rem',
+		},
 	},
 	text3: {
 		fontWeight: 'bold',
@@ -81,13 +90,20 @@ const styles = theme => ({
 		margin: '0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.6rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '1.7rem',
+		},
 	},
 	text4: {
 		fontWeight: 'bold',
 		fontSize: '1rem',
 		color: 'white',
 		marginTop: '40px',
+		'@media(max-height: 700px)': {
+			marginTop: '20px',
+			fontSize: '0.9rem',
+		},
 	},
 	newsletter: {
 		fontWeight: 'bold',
