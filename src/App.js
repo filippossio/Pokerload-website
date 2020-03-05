@@ -34,7 +34,7 @@ class App extends Component {
 		features: [
 			{
 				name: 'find a game near you',
-				description: 'Jump long registration queues, earn hustle-free your early bird bonus and find a game of your preferences.',
+				description: 'Jump long registration queues, earn your early bird hustle-free and find a game of your preference.',
 				icon: location,
 			}, {
 				name: 'Organise your game',
@@ -42,7 +42,7 @@ class App extends Component {
 				icon: calendar,
 			}, {
 				name: 'Secure online payment',
-				description: 'Find your chips waiting at your live table.',
+				description: 'Have chips waiting for you at the table.',
 				icon: payment,
 			}, {
 				name: 'request new game',
@@ -54,7 +54,7 @@ class App extends Component {
 				icon: bankroll,
 			},
 			{
-				name: 'Lean the basics',
+				name: 'Learn the basics',
 				description: 'Gain access to free tutorials on budget management, poker rules and how to gamble responsibly.',
 				icon: tutorial,
 			}, {
@@ -89,12 +89,12 @@ class App extends Component {
 				description: 'Allow players to group-up and send requests for higher stakes cash games.',
 				icon: customerPool,
 			}, {
-				name: 'Customer satisfuction',
+				name: 'Customer satisfaction',
 				description: 'Enhance customer retension via customer feedback and behaviour analysis.',
 				icon: customerSatisfaction,
 			}, {
 				name: 'Easy and secure payments',
-				description: 'Recieve fast and secure world-wide payments from an all major foreign back cards.',
+				description: 'Receive fast and secure world-wide payments from an all major foreign back cards.',
 				icon: card,
 			}, {
 				name: 'Easy and secure access',

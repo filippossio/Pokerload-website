@@ -53,6 +53,7 @@ const useStyles = theme => ({
 		fontFamily: "Roboto",
 		width: "100%",
 		color: 'white',
+		textDecoration: 'none',
 		[theme.breakpoints.down('sm')]: {
 			// fontSize: '10px',
 		},
@@ -118,13 +119,13 @@ const footer = (props) => {
 				<Grid item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={`${classes.heading} ${classes.pUppercase}`}>contact us</h2>
 					<Grid container className={classes.row}>
-						<p className={`${classes.p} ${classes.pUppercase}`}>contactus@pokerload.com</p>
+						<a target="._blank" href="mailto:contactus@pokerload.com" className={`${classes.p} ${classes.pUppercase}`}>contactus@pokerload.com</a>
 						<hr className={classes.horizontalLine}></hr>
 						<p className={`${classes.p} ${classes.pUppercase}`}>145 GEORGE STREET, G1 1RD, GLASGOW, UK</p>
 						<p className={`${classes.p} ${classes.pUppercase}`}>4 MYSTRA, 1055, NICOSIA, CYPRUS</p>
 						<hr className={classes.horizontalLine}></hr>
-						<p className={`${classes.p} ${classes.pUppercase}`}>+44 771 665 0529 (UK)</p>
-						<p className={`${classes.p} ${classes.pUppercase}`}>+357 99 740 775 (CY)</p>
+						<a href="tel:+447716650529" className={`${classes.p} ${classes.pUppercase}`}>+44 771 665 0529 (UK)</a>
+						<a href="tel:+35799740775" className={`${classes.p} ${classes.pUppercase}`}>+357 99 740 775 (CY)</a>
 					</Grid>
 				</Grid>
 				<hr className={classes.horizontalLineMobile}></hr>
@@ -143,7 +144,7 @@ const footer = (props) => {
 						</form>
 					</div>
 					<hr className={classes.horizontalLine}></hr>
-					<p className={classes.p}>By singing up, you have agreed to recieve update emails regarding our services and products</p>
+					<p className={classes.p}>By singing up, you have agreed to receive update emails regarding our services and products</p>
 				</Grid>
 				<hr className={classes.horizontalLineMobile}></hr>
 				<Grid item xs={12} md={4} className={classes.coloumn}>
