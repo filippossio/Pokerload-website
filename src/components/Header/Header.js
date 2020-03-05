@@ -31,7 +31,7 @@ const styles = theme => ({
 		},
 		[theme.breakpoints.down('sm')]: {
 			top: '50px',
-			paddingTop: '50px',
+			paddingTop: '20px',
 		},
 	},
 	headerLogo: {
