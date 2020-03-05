@@ -4,6 +4,7 @@ import HeroImage from '../../assets/heroImage.png';
 import HeroImageBusiness from '../../assets/gray_background.png';
 import HeroImageMobile from '../../assets/heroImageMobile.png';
 import HeaderLogo from '../../assets/logo.svg';
+import HeaderLogoBusiness from '../../assets/logoBusiness.svg';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
@@ -226,7 +227,7 @@ const header = (props) => {
 				</picture>
 				<div className={classes.heroContent} >
 					<div>
-						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
+						<a href="/"><img src={HeaderLogoBusiness} alt="pokerload" className={classes.headerLogo} /></a>
 						<h2 className={classes.text0}>"We bring palyers closer to you"</h2>
 						<h2 className={classes.text1}>Raise your live game</h2>
 						<h2 className={classes.text2} style={{ color: 'black' }}>CRM & Marketing platform</h2>
