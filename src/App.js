@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
 	BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 import './App.scss';
 import Header from './components/Header/Header';
@@ -114,32 +115,39 @@ class App extends Component {
 
 	render() {
 		return (
-			<Router>
-				<nav className={`navigation ${window.location.pathname === "/business" && "dark"}`}>
-					<Router>
-						<a href="/">Home</a>
-						<a href="/business">Business</a>
-						<span onClick={this.scroll} >Contact Us</span>
-					</Router>
-				</nav>
-				<Switch>
-					<Route path="/business">
-						<Header business />
-						<Pokerload />
-						<Features features={this.state.featuresBusiness} />
-						<Footer />
-						<Copyright />
-					</Route>
-					<Route path="/">
-						<Header />
-						<Pokerload />
-						<Features features={this.state.features} />
-						<ComingSoon />
-						<Footer />
-						<Copyright />
-					</Route>
-				</Switch>
-			</ Router >
+			<div>
+				<Helmet>
+					<title>Pokerload</title>
+					<meta name="description" content="PokerLoad intends to be the main channel found on an internet platform for all poker
+				activities that take place live in real casinos and licensed poker clubs worldwide." />
+				</Helmet>
+				<Router>
+					<nav className={`navigation ${window.location.pathname === "/business" && "dark"}`}>
+						<Router>
+							<a href="/">Home</a>
+							<a href="/business">Business</a>
+							<span onClick={this.scroll} >Contact Us</span>
+						</Router>
+					</nav>
+					<Switch>
+						<Route path="/business">
+							<Header business />
+							<Pokerload />
+							<Features features={this.state.featuresBusiness} />
+							<Footer />
+							<Copyright />
+						</Route>
+						<Route path="/">
+							<Header />
+							<Pokerload />
+							<Features features={this.state.features} />
+							<ComingSoon />
+							<Footer />
+							<Copyright />
+						</Route>
+					</Switch>
+				</Router>
+			</div>
 		);
 	}
 }
