@@ -34,7 +34,7 @@ class App extends Component {
 		features: [
 			{
 				name: 'find a game near you',
-				description: 'Jump long registration queues, earn hustle-free your early bird bonus and find a game of your preferences.',
+				description: 'Jump long registration queues, earn your early bird hustle-free and find a game of your preference.',
 				icon: location,
 			}, {
 				name: 'Organise your game',
@@ -42,7 +42,7 @@ class App extends Component {
 				icon: calendar,
 			}, {
 				name: 'Secure online payment',
-				description: 'Find your chips waiting at your live table.',
+				description: 'Have chips waiting for you at the table.',
 				icon: payment,
 			}, {
 				name: 'request new game',
@@ -54,7 +54,7 @@ class App extends Component {
 				icon: bankroll,
 			},
 			{
-				name: 'Lean the basics',
+				name: 'Learn the basics',
 				description: 'Gain access to free tutorials on budget management, poker rules and how to gamble responsibly.',
 				icon: tutorial,
 			}, {
@@ -73,8 +73,8 @@ class App extends Component {
 				description: 'Gain live status and management of the daily tables and attendants.',
 				icon: clientManagment,
 			}, {
-				name: 'Automate customer service desk',
-				description: 'Release pressure bottleneck game registration hours via the autmated player registration, payment and table allocation.',
+				name: 'Automated customer service desk',
+				description: 'Release pressure during bottleneck game registration hours via the automated player registration, payment and table allocation.',
 				icon: serviceDesk,
 			}, {
 				name: 'Promote your games',
@@ -82,19 +82,19 @@ class App extends Component {
 				icon: promoteGame,
 			}, {
 				name: 'Notify nearby customers',
-				description: 'Draw players to the casino\'s doorstep through targeted pushed notification.',
+				description: 'Draw players to the casino\'s doorstep through targeted pushed notifications.',
 				icon: notify,
 			}, {
 				name: 'Enlarge your customer pool',
 				description: 'Allow players to group-up and send requests for higher stakes cash games.',
 				icon: customerPool,
 			}, {
-				name: 'Customer satisfuction',
-				description: 'Enhance customer retension via customer feedback and behaviour analysis',
+				name: 'Customer satisfaction',
+				description: 'Enhance customer retension via customer feedback and behaviour analysis.',
 				icon: customerSatisfaction,
 			}, {
 				name: 'Easy and secure payments',
-				description: 'Recieve fast and secure world-wide payments from an all major foreign back cards.',
+				description: 'Receive fast and secure world-wide payments from an all major foreign back cards.',
 				icon: card,
 			}, {
 				name: 'Easy and secure access',

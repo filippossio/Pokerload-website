@@ -33,7 +33,7 @@ html {
 
     &:hover {
       cursor: pointer;
-      color: gray;
+      color: #bb001f;
     }
   }
   span {
@@ -65,7 +65,7 @@ html {
 
     &:hover {
       cursor: pointer;
-      color: gray;
+      color: #bb001f;
     }
   }
   span {
@@ -73,20 +73,5 @@ html {
   }
   @media (max-width: 599px) {
     background-color: #0000007d;
-  }
-}
-.dark {
-  a,
-  span {
-    border-left: 1px solid black;
-    color: black;
-
-    &:hover {
-      cursor: pointer;
-      color: gray;
-    }
-    &:last-of-type {
-      border-right: 1px solid black;
-    }
   }
 }

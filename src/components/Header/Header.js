@@ -37,9 +37,26 @@ const styles = theme => ({
 	headerLogo: {
 		height: '215px',
 		width: '500px',
+		marginTop: '10px',
 		[theme.breakpoints.down('sm')]: {
 			height: '170px',
 			width: '300px',
+		},
+		'@media(max-height: 700px)': {
+			height: '170px',
+		},
+		'@media(max-height: 500px)': {
+			height: '130px',
+		},
+	},
+	text0: {
+		fontWeight: 'bold',
+		fontSize: '1.5rem',
+		color: 'white',
+		margin: '1% 0 6% 0',
+		fontStyle: 'italic',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '1.2rem',
 		}
 	},
 	text1: {
@@ -49,7 +66,10 @@ const styles = theme => ({
 		margin: '10px 0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.2rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '1.2rem',
+		},
 	},
 	text2: {
 		fontWeight: 'bold',
@@ -58,7 +78,10 @@ const styles = theme => ({
 		margin: '0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.8rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '2.2rem',
+		},
 	},
 	text3: {
 		fontWeight: 'bold',
@@ -67,19 +90,26 @@ const styles = theme => ({
 		margin: '0',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.6rem',
-		}
+		},
+		'@media(max-height: 700px)': {
+			fontSize: '1.7rem',
+		},
 	},
 	text4: {
 		fontWeight: 'bold',
 		fontSize: '1rem',
 		color: 'white',
-		marginTop: '20px',
+		marginTop: '40px',
+		'@media(max-height: 700px)': {
+			marginTop: '20px',
+			fontSize: '0.9rem',
+		},
 	},
 	newsletter: {
 		fontWeight: 'bold',
 		fontSize: '1.2rem',
 		color: '#bb001f',
-		margin: '10px 0',
+		margin: '20px 0 10px 0',
 		textAlign: 'left',
 	},
 	button: {
@@ -138,6 +168,10 @@ const styles = theme => ({
 			bottom: '15%',
 			fontSize: '0.8rem',
 		},
+		'@media(max-height: 700px)': {
+			bottom: '15%',
+			height: '15%',
+		},
 	},
 	mailTo: {
 		textDecoration: 'underline',
@@ -174,7 +208,7 @@ const header = (props) => {
 				</div>
 				<div className={classes.banner}>
 					<Grid container>
-						<Grid item sm={3}>1.Download App</Grid>
+						<Grid item sm={3}>1. Download App</Grid>
 						<Grid item sm={3}>2. Register</Grid>
 						<Grid item sm={3}>3. Find your game</Grid>
 						<Grid item sm={3}>4. Book in</Grid>
@@ -193,12 +227,14 @@ const header = (props) => {
 				<div className={classes.heroContent} >
 					<div>
 						<a href="/"><img src={HeaderLogo} alt="pokerload" className={classes.headerLogo} /></a>
+						<h2 className={classes.text0}>"We bring palyers closer to you"</h2>
 						<h2 className={classes.text1}>Raise your live game</h2>
-						<h2 className={classes.text2}>CRM & Marketing platform</h2>
-						<h2 className={classes.text3}>for all licenced poker venues</h2>
+						<h2 className={classes.text2} style={{ color: 'black' }}>CRM & Marketing platform</h2>
+						<h2 className={classes.text3} style={{ color: 'black' }}>for all licenced poker venues</h2>
 						<p className={classes.newsletter} style={{ paddingTop: '20px' }}>for more info contact us</p>
-						<p className={classes.text4} style={{ marginTop: '0px' }}>
+						<p className={classes.text4} style={{ marginTop: '0px', color: 'black' }}>
 							at <a className={classes.mailTo}
+								style={{ color: 'black' }}
 								target="_blank"
 								href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">
 								Business@pokerload.com</a>
