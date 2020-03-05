@@ -41,7 +41,10 @@ const styles = theme => ({
 		[theme.breakpoints.down('sm')]: {
 			height: '170px',
 			width: '300px',
-		}
+		},
+		'@media(max-height: 700px)': {
+			height: '170px',
+		},
 	},
 	text0: {
 		fontWeight: 'bold',
@@ -148,6 +151,10 @@ const styles = theme => ({
 			height: '15%',
 			bottom: '15%',
 			fontSize: '0.8rem',
+		},
+		'@media(max-height: 700px)': {
+			bottom: '15%',
+			height: '15%',
 		},
 	},
 	mailTo: {
