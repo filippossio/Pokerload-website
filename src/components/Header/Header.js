@@ -228,7 +228,7 @@ const header = (props) => {
 				<div className={classes.heroContent} >
 					<div>
 						<a href="/"><img src={HeaderLogoBusiness} alt="pokerload" className={classes.headerLogo} /></a>
-						<h2 className={classes.text0}>"We bring palyers closer to you"</h2>
+						<h2 className={classes.text0}>"We bring players closer to you"</h2>
 						<h2 className={classes.text1}>Raise your live game</h2>
 						<h2 className={classes.text2} style={{ color: 'black' }}>CRM & Marketing platform</h2>
 						<h2 className={classes.text3} style={{ color: 'black' }}>for all licenced poker venues</h2>
