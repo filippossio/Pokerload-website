@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import CheckIcon from '@material-ui/icons/Check';
+import { TextField, Button } from '@material-ui/core';
 
 const styles = theme => ({
     heading: {
@@ -20,51 +21,14 @@ const styles = theme => ({
         },
     },
     newsletterSignUp: {
-        border: '1px solid white',
-        '& input': {
-            height: '36px',
-            border: 'none',
-            backgroundColor: "#888888",
-            color: "#ffffff",
-            padding: '0 10px',
-            float: 'left',
-            width: '70%',
-            '&::placeholder': {
-                color: '#ffffff'
-            }
-        },
-        "& button": {
-            height: "36px",
-            border: "1px solid white",
-            borderRadius: "0px",
-            fontSize: '12px',
-            width: '100%',
+        display: 'flex',
+        '& form': {
+            width: '100%'
         }
-    },
-    p: {
-        margin: "0 0",
-        fontSize: "15px",
-        lineHeight: "19px",
-        fontFamily: "Roboto",
-        width: "100%",
-        color: 'white',
-        textDecoration: 'none',
-        [theme.breakpoints.down('sm')]: {
-            // fontSize: '10px',
-        },
     },
     horizontalLine: {
         borderTop: "1px solid white",
         width: "100%",
-    },
-    button: {
-        overflow: 'hidden',
-    },
-    pBold: {
-        fontWeight: "bold",
-    },
-    pBlack: {
-        color: 'black',
     },
     submittedBody: {
         display: 'flex',
@@ -74,6 +38,29 @@ const styles = theme => ({
         color: "white",
         height: '100px',
         width: '100px'
+    },
+    emailTxtField: {
+        width: '100%',
+    },
+    emailInput: {
+        color: 'white'
+    },
+    subscribeBtn: {
+        color: 'white',
+        float: 'right'
+    },
+    p: {
+        margin: "0 0",
+        fontSize: "15px",
+        lineHeight: "19px",
+        fontFamily: "Roboto",
+        width: "100%",
+        color: 'white',
+        textDecoration: 'none',
+        paddingBottom: '20px',
+        [theme.breakpoints.down('sm')]: {
+            // fontSize: '10px',
+        },
     }
 });
 
@@ -98,22 +85,26 @@ const NewsletterSignUp = (props) => {
     )
     var body = (
         <>
+            <p className={classes.p}>By singing up, you have agreed to receive update emails regarding our services and products</p>
             <div className={classes.newsletterSignUp}>
                 <form onSubmit={submitEmail}>
-                    <input
+                    <TextField
                         value={email}
                         onChange={handleEmailChange}
                         type="email"
-                        placeholder="ENTER YOUR EMAIL"
+                        label="ENTER YOUR EMAIL"
                         id="newsletterSignUp"
+                        variant="filled"
+                        className={classes.emailTxtField}
+                        InputProps={{
+                            className: classes.emailInput,
+                        }}
                     />
-                    <div className={classes.button}>
-                        <button type="submit" className={`${styles.p} ${classes.pBold} ${classes.pBlack}`}>Join</button>
-                    </div>
+                    <Button type="submit" color="primary" className={classes.subscribeBtn}>
+                        Subscribe
+                    </Button>
                 </form>
             </div>
-            <hr className={classes.horizontalLine}></hr>
-            <p className={classes.p}>By singing up, you have agreed to receive update emails regarding our services and products</p>
         </>
     )
 
