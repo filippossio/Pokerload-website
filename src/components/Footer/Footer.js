@@ -5,6 +5,7 @@ import facebookSVG from '../../assets/facebook.svg';
 import instagramSvg from '../../assets/instagram.svg';
 import twitterSvg from '../../assets/twitter.svg';
 import linkedinSvg from '../../assets/linkedin.svg';
+import NewsletterSignUp from '../NewsletterSignUp/NewsletterSignUp'
 
 
 const useStyles = theme => ({
@@ -24,7 +25,6 @@ const useStyles = theme => ({
 				borderRight: "none",
 			},
 		},
-
 	},
 	row: {
 		color: "white",
@@ -58,9 +58,6 @@ const useStyles = theme => ({
 			// fontSize: '10px',
 		},
 	},
-	pBlack: {
-		color: 'black',
-	},
 	pUppercase: {
 		textTransform: "uppercase",
 	},
@@ -76,47 +73,16 @@ const useStyles = theme => ({
 		}
 
 	},
-	newsletter: {
-		border: '1px solid white',
-		'& input': {
-			height: '36px',
-			border: 'none',
-			backgroundColor: "#888888",
-			color: "#ffffff",
-			padding: '0 10px',
-			float: 'left',
-			width: '70%',
-			'&::placeholder': {
-				color: '#ffffff'
-			}
-		},
-		"& button": {
-			height: "36px",
-			border: "1px solid white",
-			borderRadius: "0px",
-			// padding: '10px 15px',
-			// marginLeft: '25px',
-			fontSize: '12px',
-			width: '100%',
-		}
-	},
-	button: {
-		overflow: 'hidden',
-		// paddingRight: '.5em',
-	},
-	pBold: {
-		fontWeight: "bold",
-	},
-
 });
 
 
 const footer = (props) => {
 	const { classes } = props;
+
 	return (
 		<section className={classes.footer} >
 			<Grid container>
-				<Grid item xs={12} md={4} className={classes.coloumn}>
+				<Grid id="contact-us" item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={`${classes.heading} ${classes.pUppercase}`}>contact us</h2>
 					<Grid container className={classes.row}>
 						<a target="._blank" href="mailto:contactus@pokerload.com" className={`${classes.p} ${classes.pUppercase}`}>contactus@pokerload.com</a>
@@ -130,21 +96,7 @@ const footer = (props) => {
 				</Grid>
 				<hr className={classes.horizontalLineMobile}></hr>
 				<Grid item xs={12} md={4} className={classes.coloumn}>
-					<label id="newsletter" htmlFor="newsletter" className={classes.heading}>SIGN UP</label>
-					<div className={classes.newsletter}>
-						<form action="">
-							<input
-								type="email"
-								placeholder="ENTER YOUR EMAIL"
-								id="newsletter"
-							/>
-							<div className={classes.button}>
-								<button className={`${classes.p} ${classes.pBold} ${classes.pBlack}`}>Join</button>
-							</div>
-						</form>
-					</div>
-					<hr className={classes.horizontalLine}></hr>
-					<p className={classes.p}>By singing up, you have agreed to receive update emails regarding our services and products</p>
+					<NewsletterSignUp />
 				</Grid>
 				<hr className={classes.horizontalLineMobile}></hr>
 				<Grid item xs={12} md={4} className={classes.coloumn}>
