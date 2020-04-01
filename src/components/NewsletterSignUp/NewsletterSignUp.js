@@ -39,29 +39,14 @@ const styles = theme => ({
         height: '100px',
         width: '100px'
     },
+    cssLabel: {
+        color: 'white'
+    },
     emailTxtField: {
         width: '100%',
         '&:focus': {
             color: 'green',
         },
-    },
-    white: {
-        color: 'white',
-    },
-    red: {
-        color: 'red',
-        '&$yellow $notchedOutline': {
-            borderColor: 'red'
-        }
-    },
-    pink: {
-        color: 'pink',
-    },
-    yellow: {
-        color: 'yellow',
-    },  
-    emailOutlineInput: {
-        color: 'red',
     },
     subscribeBtn: {
         color: 'white',
@@ -116,10 +101,19 @@ const NewsletterSignUp = (props) => {
                         className={classes.emailTxtField}
                         // Input pros root ->  Active text
                         InputProps={{
-                            classes: { root: classes.red, focused: classes.white }
+                            classes: {
+                                root: classes.cssLabel, //White
+                                notchedOutline: classes.notchedOutline,
+                            },
                         }}
-                        // Input label props root - > Placeholder
-                        InputLabelProps={{ classes: { root: classes.pink, focused: classes.yellow } }}
+                        InputLabelProps={{
+                            //Placeholder
+                            style: {
+                                color: "white",
+
+                            }
+                        }}
+                    // Input label props root - > Placeholder
                     />
                     <Button type="submit" color="primary" className={classes.subscribeBtn}>
                         Subscribe
