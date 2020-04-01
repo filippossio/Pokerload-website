@@ -82,7 +82,7 @@ const footer = (props) => {
 	return (
 		<section className={classes.footer} >
 			<Grid container>
-				<Grid id="contactUs" item xs={12} md={4} className={classes.coloumn}>
+				<Grid id="contact-us" item xs={12} md={4} className={classes.coloumn}>
 					<h2 className={`${classes.heading} ${classes.pUppercase}`}>contact us</h2>
 					<Grid container className={classes.row}>
 						<a target="._blank" href="mailto:contactus@pokerload.com" className={`${classes.p} ${classes.pUppercase}`}>contactus@pokerload.com</a>

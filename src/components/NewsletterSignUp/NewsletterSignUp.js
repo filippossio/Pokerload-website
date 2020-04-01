@@ -93,7 +93,7 @@ const NewsletterSignUp = (props) => {
                         onChange={handleEmailChange}
                         type="email"
                         label="ENTER YOUR EMAIL"
-                        id="newsletterSignUp"
+                        id="newsletter-sign-up"
                         variant="filled"
                         className={classes.emailTxtField}
                         InputProps={{

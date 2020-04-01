@@ -110,7 +110,7 @@ class App extends Component {
 	};
 
 	scroll = () => {
-		window.document.getElementById('contactUs').scrollIntoView();
+		window.document.getElementById('contact-us').scrollIntoView();
 	};
 
 	render() {
