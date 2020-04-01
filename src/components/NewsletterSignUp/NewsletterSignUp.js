@@ -32,12 +32,13 @@ const styles = theme => ({
     },
     submittedBody: {
         display: 'flex',
-        alignContent: 'center',
+        width: '100%'
     },
     checkIcon: {
         color: "white",
         height: '100px',
-        width: '100px'
+        width: '100%',
+
     },
     cssLabel: {
         color: 'white'
@@ -61,6 +62,17 @@ const styles = theme => ({
         color: 'white',
         textDecoration: 'none',
         paddingBottom: '20px',
+    },
+    pSubscribed: {
+        margin: "0 0",
+        fontSize: "15px",
+        lineHeight: "19px",
+        fontFamily: "Roboto",
+        width: "100%",
+        color: 'white',
+        textDecoration: 'none',
+        paddingBottom: '20px',
+        textAlign: 'center'
     }
 });
 
@@ -79,8 +91,16 @@ const NewsletterSignUp = (props) => {
     }
 
     var submittedBody = (
+        <>
+            <CheckIcon className={classes.checkIcon} />
+            <p className={classes.pSubscribed}>You have been successfully added to our mailing list!</p>
+        </>
+    )
+
+    var submittedBody2 = (
         <div className={classes.submittedBody}>
             <CheckIcon className={classes.checkIcon} />
+            <p className={classes.p}>You have been successfully added to our mailing list!</p>
         </div>
     )
     var body = (
