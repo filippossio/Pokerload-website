@@ -61,9 +61,6 @@ const styles = theme => ({
         color: 'white',
         textDecoration: 'none',
         paddingBottom: '20px',
-        [theme.breakpoints.down('sm')]: {
-            // fontSize: '10px',
-        },
     }
 });
 
