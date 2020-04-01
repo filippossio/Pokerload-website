@@ -99,21 +99,16 @@ const NewsletterSignUp = (props) => {
                         id="newsletterSignUp"
                         variant="filled"
                         className={classes.emailTxtField}
-                        // Input pros root ->  Active text
                         InputProps={{
                             classes: {
-                                root: classes.cssLabel, //White
-                                notchedOutline: classes.notchedOutline,
+                                root: classes.cssLabel, //Active Text
                             },
                         }}
                         InputLabelProps={{
-                            //Placeholder
                             style: {
-                                color: "white",
-
+                                color: "white", //Placeholder
                             }
                         }}
-                    // Input label props root - > Placeholder
                     />
                     <Button type="submit" color="primary" className={classes.subscribeBtn}>
                         Subscribe
