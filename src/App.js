@@ -6,7 +6,7 @@ import './App.scss';
 import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
-import QandA from './pages/QandA';
+import FAQ from './pages/FAQ';
 
 class App extends Component {
 	render() {
@@ -23,7 +23,7 @@ class App extends Component {
 							<a href="/">Home</a>
 							<a href="/business">Business</a>
 							<a href="/about-us">About Us</a>
-							<a href="/qanda">Q&A</a>
+							<a href="/faq">FAQ</a>
 						</Router>
 					</nav>
 					<Switch>
@@ -33,8 +33,8 @@ class App extends Component {
 						<Route path="/about-us">
 							<AboutUs />
 						</Route>
-						<Route path="/qanda">
-							<QandA />
+						<Route path="/faq">
+							<FAQ />
 						</Route>
 						<Route path="/">
 							<Home />
