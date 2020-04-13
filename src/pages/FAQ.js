@@ -59,8 +59,8 @@ const FAQ = (props) => {
 			}
 		]);
 
-	const questions = faqData.map((question) => {
-		return <FaqQuestion question={question} />;
+	const questions = faqData.map((question, index) => {
+		return <FaqQuestion question={question} key={index} />;
 	});
 
 	return (
