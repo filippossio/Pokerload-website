@@ -1,5 +1,5 @@
-const firebase = require("firebase");
-// Required for side-effects
+import firebase from 'firebase/app';
+
 const Firebase = {
 	initFirebase() {
 		var firebaseConfig = {

@@ -31,7 +31,7 @@ class App extends Component {
 				activities that take place live in real casinos and licensed poker clubs worldwide." />
 				</Helmet>
 				<Router>
-					<nav className={`navigation ${window.location.pathname === "/business" && "dark"}`}>
+					<nav className={`navigation ${window.location.pathname === "/business" && "dark"} ${window.location.pathname === "/faq" && "dark"}`}>
 						<Router>
 							<a href="/">Home</a>
 							<a href="/business">Business</a>

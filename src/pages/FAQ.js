@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CustomExpansionPanel from '../components/CustomExpansionPanel/CustomExpansionPanel';
+import Footer from '../components/Footer/Footer';
+import Copyright from '../components/Footer/Copyright';
+import FaqQuestion from '../components/FaqQuestion/FaqQuestion';
 
 const styles = theme => ({
-	root: {
-		width: '100%',
+	faq: {
+
+	},
+	hero: {
+		height: '30vh',
+		width: '100vw',
+		backgroundColor: "#DCDCDC",
 	},
 	heading: {
-		fontSize: theme.typography.pxToRem(15),
-		flexBasis: '33.33%',
-		flexShrink: 0,
+		fontSize: theme.typography.pxToRem(40),
+		position: 'absolute',
+		top: '10%',
+		width: '100%',
+		display: 'flex',
+		justifyContent: 'center',
+
 	},
-	secondaryHeading: {
-		fontSize: theme.typography.pxToRem(15),
-		color: theme.palette.text.secondary,
-	},
+	questions: {
+		padding: '20px 0'
+	}
 });
 
 
 
 const FAQ = (props) => {
 	const { classes } = props;
-	const [expanded, setExpanded] = useState(false);
 	const [faqData] = useState(
 		[
 			{
@@ -40,33 +43,40 @@ const FAQ = (props) => {
 			},
 			{
 				title: "What and how do we charge for our services?",
-				conent: "For every new game checked-in there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.\nExtra bank charges may apply depending of each player’s branch.\nPayments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
+				content: "For every new game checked-in there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.\nExtra bank charges may apply depending of each player’s branch.\nPayments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
 			},
 			{
 				title: "Where do we operate?",
-				conent: "Currently we are operating in the UK and Cyprus only. We do have plans to expand internationally."
+				content: "Currently we are operating in the UK and Cyprus only. We do have plans to expand internationally."
 			},
 			{
 				title: "Where are we located?",
-				conent: "Our Headquarters are based in Cyprus."
+				content: "Our Headquarters are based in Cyprus."
 			},
 			{
 				title: "Facing any problems?",
-				conent: "Get in touch via the email contactus@pokerload.comand we will contact directly as soon as possible."
+				content: "Get in touch via the email contactus@pokerload.comand we will contact directly as soon as possible."
 			}
 		]);
 
-	const handleChange = (panel) => (event, isExpanded) => {
-		setExpanded(isExpanded ? panel : false);
-	};
+	const questions = faqData.map((question) => {
+		return <FaqQuestion question={question} />;
+	});
 
 	return (
-		<Container>
-			<h1>Frequently Asked Questions</h1>
-			<div className={classes.root}>
-				<CustomExpansionPanel expanded={expanded === 'panel1'} handleChange={handleChange} />
+		<>
+			<div className={classes.faq}>
+				<header>
+					<div alt="" className={classes.hero} />
+					<h1 className={classes.heading}>Frequently Asked Questions</h1>
+				</header>
+				<div className={classes.questions}>
+					{questions}
+				</div>
+				<Footer />
+				<Copyright />
 			</div>
-		</Container>
+		</>
 	);
 };
 

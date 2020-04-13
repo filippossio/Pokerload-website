@@ -232,4 +232,4 @@ const header = (props) => {
 	}
 };
 
-export default withStyles(styles)(header);;;;;;;;
+export default withStyles(styles)(header);
