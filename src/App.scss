@@ -23,8 +23,7 @@ html {
   height: fit-content;
   text-transform: uppercase;
 
-  a,
-  span {
+  a {
     height: fit-content;
     text-decoration: none;
     border-left: 1px solid white;
@@ -36,9 +35,11 @@ html {
       color: #bb001f;
     }
   }
-  span {
+
+  a:last-child {
     border-right: 1px solid white;
   }
+
   @media (max-width: 599px) {
     width: 100vw;
     justify-content: center;
@@ -46,20 +47,18 @@ html {
     padding-top: 0px;
     background-color: #ffffff57;
 
-    a,
-    span {
+    a {
       color: black;
       border-left: 1px solid black;
       margin: 10px 0;
     }
-    span {
+    a:last-child {
       border-right: 1px solid black;
     }
   }
 }
 .dark {
-  a,
-  span {
+  a {
     border-left: 1px solid black;
     color: black;
 
@@ -68,7 +67,7 @@ html {
       color: #bb001f;
     }
   }
-  span {
+  a:last-child {
     border-right: 1px solid black;
   }
   @media (max-width: 599px) {
