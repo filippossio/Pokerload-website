@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Footer from '../components/Footer/Footer';
 import Copyright from '../components/Footer/Copyright';
 import FaqQuestion from '../components/FaqQuestion/FaqQuestion';
+import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
 
 const styles = theme => ({
 	faq: {
@@ -66,10 +67,7 @@ const FAQ = (props) => {
 	return (
 		<>
 			<div className={classes.faq}>
-				<header>
-					<div alt="" className={classes.hero} />
-					<h1 className={classes.heading}>Frequently Asked Questions</h1>
-				</header>
+				<SimpleHeader title="Frequently Asked Questions" />
 				<div className={classes.questions}>
 					{questions}
 				</div>

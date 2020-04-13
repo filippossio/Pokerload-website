@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
 import FAQ from './pages/FAQ';
+import TandC from './pages/TandC';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 class App extends Component {
 	state = {
 		firebaseInstance: null,
@@ -40,6 +42,12 @@ class App extends Component {
 						</Router>
 					</nav>
 					<Switch>
+						<Route path="/terms-and-conditions">
+							<TandC />
+						</Route>
+						<Route path="/privacy-policy">
+							<PrivacyPolicy />
+						</Route>
 						<Route path="/business">
 							<Business />
 						</Route>
