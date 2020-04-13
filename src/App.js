@@ -3,6 +3,7 @@ import {
 	BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import Firebase from './network/Firebase';
 
 import './App.scss';
 import Header from './components/Header/Header';
@@ -29,9 +30,9 @@ import customerSatisfaction from './assets/pokerloadIcons/customer_satisfaction.
 import card from './assets/pokerloadIcons/card.svg';
 import easySecure from './assets/pokerloadIcons/easy_secure.svg';
 import casinoServices from './assets/pokerloadIcons/casino_services.svg';
-
 class App extends Component {
 	state = {
+		firebaseInstance: null,
 		features: [
 			{
 				name: 'find a game near you',
@@ -108,6 +109,11 @@ class App extends Component {
 			},
 		]
 	};
+
+	componentDidMount() {
+		const fbInstance = Firebase.initFirebase();
+		this.setState({ firebaseInstance: fbInstance });
+	}
 
 	scroll = () => {
 		window.document.getElementById('contact-us').scrollIntoView();
