@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
 import FAQ from './pages/FAQ';
+import TandC from './pages/TandC';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 class App extends Component {
 	state = {
 		firebaseInstance: null,
@@ -31,7 +33,9 @@ class App extends Component {
 				activities that take place live in real casinos and licensed poker clubs worldwide." />
 				</Helmet>
 				<Router>
-					<nav className={`navigation ${window.location.pathname === "/business" && "dark"} ${window.location.pathname === "/faq" && "dark"}`}>
+					<nav className={
+						`navigation ${window.location.pathname !== "/" && "dark"}
+					`}>
 						<Router>
 							<a href="/">Home</a>
 							<a href="/business">Business</a>
@@ -40,6 +44,12 @@ class App extends Component {
 						</Router>
 					</nav>
 					<Switch>
+						<Route path="/terms-and-conditions">
+							<TandC />
+						</Route>
+						<Route path="/privacy-policy">
+							<PrivacyPolicy />
+						</Route>
 						<Route path="/business">
 							<Business />
 						</Route>

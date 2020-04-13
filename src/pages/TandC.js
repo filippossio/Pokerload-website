@@ -3,14 +3,15 @@ import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
 import Copyright from '../components/Footer/Copyright';
 import Footer from '../components/Footer/Footer';
 
-const AboutUs = () => {
+
+const TandC = () => {
 	return (
 		<>
-			<SimpleHeader title="About Us" />
+			<SimpleHeader title="Terms and Conditions" />
 			<Footer />
 			<Copyright />
 		</>
 	);
 };
 
-export default AboutUs;
+export default TandC;
