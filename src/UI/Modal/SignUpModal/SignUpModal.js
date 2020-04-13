@@ -35,12 +35,21 @@ const styles = theme => ({
         height: '250px',
         width: '500px'
     },
+    modalContainerFs: {
+        backgroundColor: "#606060",
+        height: '100%',
+        width: '100%',
+    },
     closeButton: {
         position: 'absolute',
         right: theme.spacing(1),
         top: theme.spacing(1),
         color: theme.palette.grey[500],
     },
+    dialogFs: {
+        margin: 'auto',
+        height: '250px'
+    }
 });
 
 const SignUpModal = (props) => {
@@ -62,13 +71,13 @@ const SignUpModal = (props) => {
     return (
         <div>
             <button className={classes.signUpBtn} onClick={handleClickOpen}>SIGN UP</button>
-            <Dialog open={open} onClose={handleClose} fullScreen={fullScreen}>
+            <Dialog open={open} onClose={handleClose} fullScreen={fullScreen} className={fullScreen ? classes.dialogFs : null}>
                 {handleClose ? (
                     <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
                         <CloseIcon />
                     </IconButton>
                 ) : null}
-                <Container className={classes.modalContainer}>
+                <Container className={fullScreen ? classes.modalContainerFs : classes.modalContainer}>
                     <NewsletterSignUp />
                 </Container>
             </Dialog>

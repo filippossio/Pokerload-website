@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import Firebase from './network/Firebase';
 
 import './App.scss';
 import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
 import FAQ from './pages/FAQ';
-
 class App extends Component {
+	state = {
+		firebaseInstance: null,
+	};
+
+	componentDidMount() {
+		const fbInstance = Firebase.initFirebase();
+		this.setState({ firebaseInstance: fbInstance });
+	}
+
+	scroll = () => {
+		window.document.getElementById('contact-us').scrollIntoView();
+	};
+
 	render() {
 		return (
 			<div>

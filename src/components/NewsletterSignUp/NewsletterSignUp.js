@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Firebase from '../../network/Firebase';
 import { withStyles } from '@material-ui/core/styles';
 import CheckIcon from '@material-ui/icons/Check';
 import { TextField, Button } from '@material-ui/core';
@@ -79,11 +80,13 @@ const styles = theme => ({
 const NewsletterSignUp = (props) => {
 	const { classes } = props;
 	const [email, setEmail] = useState('');
-	const [submitted, setSubmitted] = useState(false);
+	const [submitted, setSubmitted] = useState(null);
 
 	var submitEmail = (e) => {
 		e.preventDefault();
-		setSubmitted(true);
+		Firebase.addEmailToMaillingList(email)
+			.then(() => setSubmitted(true))
+			.catch(() => setSubmitted(false));
 	};
 
 	var handleEmailChange = (e) => {
