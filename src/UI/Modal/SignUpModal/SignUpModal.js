@@ -7,7 +7,6 @@ import { Container } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
-
 const styles = theme => ({
     signUpBtn: {
         width: '200px',
@@ -33,12 +32,11 @@ const styles = theme => ({
     modalContainer: {
         backgroundColor: "#606060",
         height: '250px',
-        width: '500px'
-    },
-    modalContainerFs: {
-        backgroundColor: "#606060",
-        height: '100%',
-        width: '100%',
+        width: '500px',
+        [theme.breakpoints.down('sm')]: {
+            height: '100%',
+            width: '100%',
+        }
     },
     closeButton: {
         position: 'absolute',
@@ -46,9 +44,11 @@ const styles = theme => ({
         top: theme.spacing(1),
         color: theme.palette.grey[500],
     },
-    dialogFs: {
-        margin: 'auto',
-        height: '250px'
+    dialog: {
+        [theme.breakpoints.down('sm')]: {
+            margin: 'auto',
+            height: '250px'
+        }
     }
 });
 
@@ -56,7 +56,6 @@ const SignUpModal = (props) => {
     const { classes } = props;
     const [open, setOpen] = useState(false);
 
-    // Media Query
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -71,13 +70,13 @@ const SignUpModal = (props) => {
     return (
         <div>
             <button className={classes.signUpBtn} onClick={handleClickOpen}>SIGN UP</button>
-            <Dialog open={open} onClose={handleClose} fullScreen={fullScreen} className={fullScreen ? classes.dialogFs : null}>
+            <Dialog open={open} onClose={handleClose} fullScreen={fullScreen} className={classes.dialog}>
                 {handleClose ? (
                     <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
                         <CloseIcon />
                     </IconButton>
                 ) : null}
-                <Container className={fullScreen ? classes.modalContainerFs : classes.modalContainer}>
+                <Container className={classes.modalContainer}>
                     <NewsletterSignUp />
                 </Container>
             </Dialog>
