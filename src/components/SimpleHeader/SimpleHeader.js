@@ -2,25 +2,24 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-	faq: {
-
-	},
 	hero: {
 		height: '30vh',
 		width: '100vw',
-		backgroundColor: "#DCDCDC",
+		backgroundImage: 'linear-gradient(to top, #d8d8d8, white)',
+		display: 'flex',
+		alignItems: 'center'
 	},
 	heading: {
 		fontSize: theme.typography.pxToRem(40),
-		position: 'absolute',
-		top: '10%',
+		fontFamily: 'roboto',
+		color: '#222222',
+		textTransform: 'uppercase',
 		width: '100%',
-		display: 'flex',
 		justifyContent: 'center',
-
-	},
-	questions: {
-		padding: '20px 0'
+		textAlign: 'center',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '2rem',
+		}
 	}
 });
 
@@ -28,8 +27,9 @@ const SimpleHeader = (props) => {
 	const { classes, title } = props;
 	return (
 		<header>
-			<div alt="" className={classes.hero} />
-			<h1 className={classes.heading}>{title}</h1>
+			<div alt="" className={classes.hero}>
+				<h1 className={classes.heading}>{title}</h1>
+			</div>
 		</header>
 	);
 };

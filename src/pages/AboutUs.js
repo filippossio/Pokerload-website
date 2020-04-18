@@ -1,15 +1,11 @@
 import React from 'react';
-import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
-import Copyright from '../components/Footer/Copyright';
-import Footer from '../components/Footer/Footer';
+import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
 const AboutUs = () => {
 	return (
-		<>
-			<SimpleHeader title="About Us" />
-			<Footer />
-			<Copyright />
-		</>
+		<SimpleTemplate title="About Us">
+			<h1 style={{ textAlign: 'center', fontFamily: 'roboto', color: '#404040' }}>Work in Progress...</h1>
+		</SimpleTemplate>
 	);
 };
 

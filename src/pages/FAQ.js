@@ -1,28 +1,9 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../components/Footer/Footer';
-import Copyright from '../components/Footer/Copyright';
 import FaqQuestion from '../components/FaqQuestion/FaqQuestion';
-import SimpleHeader from '../components/SimpleHeader/SimpleHeader';
+import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
 const styles = theme => ({
-	faq: {
-
-	},
-	hero: {
-		height: '30vh',
-		width: '100vw',
-		backgroundColor: "#DCDCDC",
-	},
-	heading: {
-		fontSize: theme.typography.pxToRem(40),
-		position: 'absolute',
-		top: '10%',
-		width: '100%',
-		display: 'flex',
-		justifyContent: 'center',
-
-	},
 	questions: {
 		padding: '20px 0'
 	}
@@ -65,16 +46,11 @@ const FAQ = (props) => {
 	});
 
 	return (
-		<>
-			<div className={classes.faq}>
-				<SimpleHeader title="Frequently Asked Questions" />
-				<div className={classes.questions}>
-					{questions}
-				</div>
-				<Footer />
-				<Copyright />
+		<SimpleTemplate title="Frequently Asked Questions">
+			<div className={classes.questions}>
+				{questions}
 			</div>
-		</>
+		</SimpleTemplate>
 	);
 };
 

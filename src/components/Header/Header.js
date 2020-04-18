@@ -18,6 +18,9 @@ const styles = theme => ({
 	hero: {
 		height: '100vh',
 		width: '100vw',
+		[theme.breakpoints.down('sm')]: {
+			height: '95vh',
+		}
 	},
 	heroContent: {
 		paddingLeft: '20px',
