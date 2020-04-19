@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
 import HeroImage from '../../assets/heroImage.png';
 import HeroImageBusiness from '../../assets/gray_background.png';
 import HeroImageMobile from '../../assets/heroImageMobile.png';
@@ -17,6 +18,9 @@ const styles = theme => ({
 	hero: {
 		height: '100vh',
 		width: '100vw',
+		[theme.breakpoints.down('sm')]: {
+			height: '95vh',
+		}
 	},
 	heroContent: {
 		paddingLeft: '20px',
@@ -113,27 +117,6 @@ const styles = theme => ({
 		margin: '20px 0 10px 0',
 		textAlign: 'left',
 	},
-	button: {
-		width: '200px',
-		height: '50px',
-		marginTop: '20px',
-		borderRadius: '50px',
-		backgroundColor: '#606060',
-		borderColor: '#606060',
-		color: 'white',
-		fontSize: '27px',
-		'&:hover': {
-			backgroundColor: 'black',
-			borderColor: '#606060',
-			cursor: 'pointer',
-		},
-		'&:focus': {
-			outline: '0',
-		},
-		'&:active': {
-			transform: 'translateY(4px)',
-		}
-	},
 	banner: {
 		height: '20%',
 		fontWeight: '500',
@@ -186,9 +169,6 @@ const styles = theme => ({
 const header = (props) => {
 	const { classes, business } = props;
 
-	const scrollToNewsletter = () => {
-		window.document.getElementById('newsletter').scrollIntoView();
-	};
 	if (!business) {
 		return (
 			<header className={classes.header}>
@@ -203,7 +183,7 @@ const header = (props) => {
 						<h2 className={classes.text2}>Book & Buy-in</h2>
 						<h2 className={classes.text3}>in just a few clicks</h2>
 						<p className={classes.newsletter}>join our newsletter</p>
-						<button className={classes.button} onClick={scrollToNewsletter}>SIGN UP</button>
+						<SignUpModal />
 						<p className={classes.text4}>Must be 21+ years old to sign up</p>
 					</div>
 				</div>
@@ -255,4 +235,4 @@ const header = (props) => {
 	}
 };
 
-export default withStyles(styles)(header);;;;;;;;
+export default withStyles(styles)(header);

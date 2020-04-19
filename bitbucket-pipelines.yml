@@ -6,6 +6,15 @@
 image: node:10.15.3
 
 pipelines:
+  custom:
+    test-branch:
+      - step:
+          script:
+            - npm install
+            - npm install -g firebase-tools
+            - npm run build
+            - firebase deploy --only hosting:test-pokerload
+            - echo "Deployed to test enviroment -> test-pokerload.web.app"
   branches:
     master:
       - step:
