@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import Copyright from '../components/Footer/Copyright';
 import ComingSoon from '../components/ComingSoon/ComingSoon';
 import Pokerload from '../components/Pokerload/Pokerload';
-
 import location from '../assets/location.svg';
 import calendar from '../assets/calendar.svg';
 import payment from '../assets/payment.svg';
@@ -16,7 +14,8 @@ import tutorial from '../assets/tutorial.svg';
 import taxi from '../assets/taxi.svg';
 import loyalty from '../assets/loyalty.svg';
 
-const Home = () => {
+const Home = (props) => {
+	const { onPageVisit } = props;
 	const [features] = useState([
 		{
 			name: 'find a game near you',
@@ -53,6 +52,11 @@ const Home = () => {
 			icon: taxi,
 		},
 	]);
+
+	useEffect(() => {
+		onPageVisit();
+	});
+
 	return (
 		<>
 			<Header />

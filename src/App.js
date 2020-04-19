@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import { Helmet } from 'react-helmet';
-import Firebase from './network/Firebase';
-
+import Analytics from './network/analytics/Analytics';
 import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
@@ -74,9 +73,9 @@ const styles = theme => ({
 const App = (props) => {
 	const { classes } = props;
 
-	useEffect(() => {
-		Firebase.initFirebase();
-	});
+	const pageLoaded = (page) => {
+		Analytics.onVisitPage(page);
+	};
 
 	return (
 		<div>
@@ -96,27 +95,26 @@ const App = (props) => {
 				</nav>
 				<Switch>
 					<Route path="/terms-and-conditions">
-						<TandC />
+						<TandC onPageVisit={() => pageLoaded('Terms and Conditions')} />
 					</Route>
 					<Route path="/privacy-policy">
-						<PrivacyPolicy />
+						<PrivacyPolicy onPageVisit={() => pageLoaded('Privacy Policy')} />
 					</Route>
 					<Route path="/business">
-						<Business />
+						<Business onPageVisit={() => pageLoaded('Business')} />
 					</Route>
 					<Route path="/about-us">
-						<AboutUs />
+						<AboutUs onPageVisit={() => pageLoaded('About Us')} />
 					</Route>
 					<Route path="/faq">
-						<FAQ />
+						<FAQ onPageVisit={() => pageLoaded('FaQ')} />
 					</Route>
 					<Route path="/">
-						<Home />
+						<Home onPageVisit={() => pageLoaded('Home')} />
 					</Route>
 				</Switch>
 			</Router>
 		</div >
 	);
-}
-
+};
 export default withStyles(styles)(App);

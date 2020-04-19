@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import FaqQuestion from '../components/FaqQuestion/FaqQuestion';
 import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
@@ -12,7 +12,7 @@ const styles = theme => ({
 
 
 const FAQ = (props) => {
-	const { classes } = props;
+	const { classes, onPageVisit } = props;
 	const [faqData] = useState(
 		[
 			{
@@ -40,6 +40,10 @@ const FAQ = (props) => {
 				content: "Get in touch via the email contactus@pokerload.comand we will contact directly as soon as possible."
 			}
 		]);
+
+	useEffect(() => {
+		onPageVisit();
+	});
 
 	const questions = faqData.map((question, index) => {
 		return <FaqQuestion question={question} key={index} />;

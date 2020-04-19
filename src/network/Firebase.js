@@ -10,10 +10,9 @@ const Firebase = {
 			storageBucket: "",
 			messagingSenderId: "712812382202",
 			appId: "1:712812382202:web:2d120497bc5072a5838643",
-			measurementId: "G-68BZG22GFT",
+			measurementId: "G-W8KLZQQFWS",
 		};
 		firebase.initializeApp(firebaseConfig);
-		return firebase;
 	},
 	addEmailToMaillingList(email) {
 		return new Promise((resolve, reject) => {
@@ -44,6 +43,10 @@ const Firebase = {
 			});
 		});
 	},
+	onVisitPage() {
+		const analytics = firebase.analytics();
+		analytics.logEvent('hello there');
+	}
 };
 
 export default Firebase;
