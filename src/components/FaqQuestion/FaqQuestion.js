@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 	faqQuestionCont: {
-		paddingBottom: '10px',
+		paddingBottom: '25px',
 	},
 	faqQuestion: {
 		fontFamily: 'roboto',

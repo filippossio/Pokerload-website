@@ -3,7 +3,6 @@ import Header from '../components/Header/Header';
 import Pokerload from '../components/Pokerload/Pokerload';
 import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
-import Copyright from '../components/Footer/Copyright';
 import clientManagment from '../assets/pokerloadIcons/customer_management.svg';
 import serviceDesk from '../assets/pokerloadIcons/service_desk.svg';
 import promoteGame from '../assets/pokerloadIcons/promote_game.svg';
@@ -67,7 +66,7 @@ const Business = (props) => {
 			<Pokerload />
 			<Features features={feature} />
 			<Footer />
-			<Copyright />
+			{/* <Copyright /> */}
 		</>
 	);
 };

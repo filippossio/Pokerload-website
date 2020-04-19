@@ -17,7 +17,11 @@ const FAQ = (props) => {
 		[
 			{
 				title: "What are our values?",
-				content: "We make sure that poker players receive maximum benefits and have an easier and more efficient overall poker experience."
+				content: "We want to make sure that poker players receive maximum benefits and have an easier and more efficient overall live-poker experience."
+			},
+			{
+				title: "What are our values?",
+				content: "Resilience - Passion - Creativity & Innovation - Adaptation to changes",
 			},
 			{
 				title: "How does it work?",
@@ -25,7 +29,7 @@ const FAQ = (props) => {
 			},
 			{
 				title: "What and how do we charge for our services?",
-				content: "For every new game checked-in there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.\nExtra bank charges may apply depending of each player’s branch.\nPayments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
+				content: "For every new game checked-in there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged. Extra bank charges may apply depending of each player’s branch. Payments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
 			},
 			{
 				title: "Where do we operate?",
@@ -37,7 +41,7 @@ const FAQ = (props) => {
 			},
 			{
 				title: "Facing any problems?",
-				content: "Get in touch via the email contactus@pokerload.comand we will contact directly as soon as possible."
+				content: "Get in touch via the email contactus@pokerload.com and we will contact directly as soon as possible."
 			}
 		]);
 

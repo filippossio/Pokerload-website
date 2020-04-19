@@ -89,7 +89,7 @@ const App = (props) => {
 					<Router>
 						<a href="/">Home</a>
 						<a href="/business">Business</a>
-						<a href="/about-us">About Us</a>
+						{/* <a href="/about-us">About Us</a> */}
 						<a href="/faq">FAQ</a>
 					</Router>
 				</nav>
