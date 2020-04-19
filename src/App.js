@@ -49,7 +49,9 @@ const styles = theme => ({
 			'& a': {
 				color: 'black',
 				borderLeft: '1px solid black',
-				margin: '10px 0'
+				margin: '10px 0',
+				padding: '0 10px',
+				fontSize: '0.875rem'
 			},
 			'& a:last-child': {
 				borderRight: '1px solid black'
