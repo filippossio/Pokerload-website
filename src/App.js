@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, useTheme } from '@material-ui/core/styles';
 import { Helmet } from 'react-helmet';
 import Analytics from './network/analytics/Analytics';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Firebase from './network/Firebase';
+
 import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
@@ -23,19 +26,16 @@ const styles = theme => ({
 		right: '0px',
 		height: 'fit-content',
 		textTransform: 'uppercase',
+		textAlign: 'center',
 		'& a': {
 			height: 'fit-content',
 			textDecoration: 'none',
-			borderLeft: '1px solid white',
 			padding: '0 20px',
 			color: 'white',
 			'&:hover': {
 				cursor: 'pointer',
 				color: '#bb001f'
 			}
-		},
-		'& a:last-child': {
-			borderRight: '1px solid white'
 		},
 		[theme.breakpoints.down('sm')]: {
 			width: '100vw',
@@ -47,35 +47,48 @@ const styles = theme => ({
 			position: 'unset',
 			'& a': {
 				color: 'black',
-				borderLeft: '1px solid black',
-				margin: '10px 0'
-			},
-			'& a:last-child': {
-				borderRight: '1px solid black'
+				margin: 'auto',
+				padding: '0 10px',
+				fontSize: '0.875rem'
 			}
 		}
 	},
 	dark: {
 		'& a': {
-			borderLeft: '1px solid black',
 			color: 'black',
 			'&:hover': {
 				cursor: 'pointer',
 				color: '#bb001f'
 			}
-		},
-		'& a:last-child': {
-			borderRight: '1px solid black'
 		}
+	},
+	verticalLine: {
+		borderLeft: '1px solid white',
+		[theme.breakpoints.down('sm')]: {
+			borderLeft: '1px solid black',
+			margin: '5px 3px',
+		}
+	},
+	verticalLineDark: {
+		borderLeft: '1px solid black',
 	}
 });
 
 const App = (props) => {
 	const { classes } = props;
 
+	useEffect(() => {
+		Firebase.initFirebase();
+	}, []);
+
 	const pageLoaded = (page) => {
 		Analytics.onVisitPage(page);
 	};
+
+	const theme = useTheme();
+	const mobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+	let separator = <div className={`${classes.verticalLine} ${window.location.pathname !== "/" ? classes.verticalLineDark : ''}`} />;
 
 	return (
 		<div>
@@ -87,10 +100,15 @@ const App = (props) => {
 			<Router>
 				<nav className={`${classes.navigation} ${window.location.pathname !== "/" ? classes.dark : ''}`}>
 					<Router>
+						{mobile ? null : separator}
 						<a href="/">Home</a>
+						{separator}
 						<a href="/business">Business</a>
-						{/* <a href="/about-us">About Us</a> */}
+						{separator}
+						<a href="/about-us">About Us</a>
+						{separator}
 						<a href="/faq">FAQ</a>
+						{mobile ? null : separator}
 					</Router>
 				</nav>
 				<Switch>

@@ -191,7 +191,7 @@ const header = (props) => {
 					<Grid container>
 						<Grid item sm={3}>1. Download App</Grid>
 						<Grid item sm={3}>2. Register</Grid>
-						<Grid item sm={3}>3. Find your game</Grid>
+						<Grid item sm={3}>3. Find game</Grid>
 						<Grid item sm={3}>4. Book in</Grid>
 					</Grid>
 				</div>
