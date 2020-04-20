@@ -24,19 +24,16 @@ const styles = theme => ({
 		right: '0px',
 		height: 'fit-content',
 		textTransform: 'uppercase',
+		textAlign: 'center',
 		'& a': {
 			height: 'fit-content',
 			textDecoration: 'none',
-			borderLeft: '1px solid white',
 			padding: '0 20px',
 			color: 'white',
 			'&:hover': {
 				cursor: 'pointer',
 				color: '#bb001f'
 			}
-		},
-		'& a:last-child': {
-			borderRight: '1px solid white'
 		},
 		[theme.breakpoints.down('sm')]: {
 			width: '100vw',
@@ -48,28 +45,30 @@ const styles = theme => ({
 			position: 'unset',
 			'& a': {
 				color: 'black',
-				borderLeft: '1px solid black',
-				margin: '10px 0',
+				margin: 'auto',
 				padding: '0 10px',
 				fontSize: '0.875rem'
-			},
-			'& a:last-child': {
-				borderRight: '1px solid black'
 			}
 		}
 	},
 	dark: {
 		'& a': {
-			borderLeft: '1px solid black',
 			color: 'black',
 			'&:hover': {
 				cursor: 'pointer',
 				color: '#bb001f'
 			}
-		},
-		'& a:last-child': {
-			borderRight: '1px solid black'
 		}
+	},
+	verticalLine: {
+		borderLeft: '1px solid white',
+		[theme.breakpoints.down('sm')]: {
+			borderLeft: '1px solid black',
+			margin: '5px 3px',
+		}
+	},
+	verticalLineDark: {
+		borderLeft: '1px solid black',
 	}
 });
 
@@ -79,6 +78,8 @@ const App = (props) => {
 	useEffect(() => {
 		Firebase.initFirebase();
 	});
+
+	let separator = <div className={`${classes.verticalLine} ${window.location.pathname !== "/" ? classes.verticalLineDark : ''}`} />;
 
 	return (
 		<div>
@@ -90,10 +91,15 @@ const App = (props) => {
 			<Router>
 				<nav className={`${classes.navigation} ${window.location.pathname !== "/" ? classes.dark : ''}`}>
 					<Router>
+						{separator}
 						<a href="/">Home</a>
+						{separator}
 						<a href="/business">Business</a>
+						{separator}
 						<a href="/about-us">About Us</a>
+						{separator}
 						<a href="/faq">FAQ</a>
+						{separator}
 					</Router>
 				</nav>
 				<Switch>
