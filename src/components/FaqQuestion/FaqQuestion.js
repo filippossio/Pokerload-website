@@ -18,10 +18,21 @@ const styles = theme => ({
 
 const FaqQuestion = (props) => {
 	const { question, classes } = props;
+	let content = [];
+	if (question.content.length > 1) {
+		const list = question.content.map((element, index) => {
+			return <li key={index}><Typography>{element}</Typography></li>;
+		});
+		content = (<ul>{list}</ul>);
+	} else {
+		content = <Typography>{question.content}</Typography>;
+	}
 	return (
 		<Container className={classes.faqQuestionCont}>
 			<h2 className={classes.faqQuestion}>{question.title}</h2>
-			<Typography>{question.content}</Typography>
+			{
+				content
+			}
 		</Container>
 	);
 };
