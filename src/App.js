@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, useTheme } from '@material-ui/core/styles';
 import { Helmet } from 'react-helmet';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Firebase from './network/Firebase';
 
 import Home from './pages/Home';
@@ -77,7 +78,10 @@ const App = (props) => {
 
 	useEffect(() => {
 		Firebase.initFirebase();
-	});
+	}, []);
+
+	const theme = useTheme();
+	const mobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 	let separator = <div className={`${classes.verticalLine} ${window.location.pathname !== "/" ? classes.verticalLineDark : ''}`} />;
 
@@ -91,7 +95,7 @@ const App = (props) => {
 			<Router>
 				<nav className={`${classes.navigation} ${window.location.pathname !== "/" ? classes.dark : ''}`}>
 					<Router>
-						{separator}
+						{mobile ? null : separator}
 						<a href="/">Home</a>
 						{separator}
 						<a href="/business">Business</a>
@@ -99,7 +103,7 @@ const App = (props) => {
 						<a href="/about-us">About Us</a>
 						{separator}
 						<a href="/faq">FAQ</a>
-						{separator}
+						{mobile ? null : separator}
 					</Router>
 				</nav>
 				<Switch>
