@@ -2,17 +2,19 @@ import firebase from 'firebase';
 
 const Firebase = {
 	initFirebase() {
-		var firebaseConfig = {
-			apiKey: "AIzaSyA2NSlCTS4uiIKBI7e-yRvuMisCTQai2PU",
-			authDomain: "pokerload.firebaseapp.com",
-			databaseURL: "https://pokerload.firebaseio.com",
-			projectId: "pokerload",
-			storageBucket: "",
-			messagingSenderId: "712812382202",
-			appId: "1:712812382202:web:2d120497bc5072a5838643",
-			measurementId: "G-W8KLZQQFWS",
-		};
-		firebase.initializeApp(firebaseConfig);
+		if (!firebase.apps.length) {
+			var firebaseConfig = {
+				apiKey: "AIzaSyA2NSlCTS4uiIKBI7e-yRvuMisCTQai2PU",
+				authDomain: "pokerload.firebaseapp.com",
+				databaseURL: "https://pokerload.firebaseio.com",
+				projectId: "pokerload",
+				storageBucket: "",
+				messagingSenderId: "712812382202",
+				appId: "1:712812382202:web:2d120497bc5072a5838643",
+				measurementId: "G-W8KLZQQFWS",
+			};
+			firebase.initializeApp(firebaseConfig);
+		}
 	},
 	addEmailToMaillingList(email) {
 		return new Promise((resolve, reject) => {

@@ -13,6 +13,9 @@
         ],
         "test-pokerload": [
           "test-pokerload"
+        ],
+        "test2-pokerload": [
+          "test2-pokerload"
         ]
       }
     }
