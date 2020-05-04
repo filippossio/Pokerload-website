@@ -16,7 +16,7 @@ const FAQ = (props) => {
 	const [faqData] = useState(
 		[
 			{
-				title: "What are our values?",
+				title: "What is our goal?",
 				content: [
 					"We want to make sure that poker players receive maximum benefits and have an easier and more efficient overall live-poker experience."
 				]
@@ -39,7 +39,7 @@ const FAQ = (props) => {
 			{
 				title: "What and how do we charge for our services?",
 				content: [
-					"For every new game checked-in there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.",
+					"For every new game checked-in, there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.",
 					"Extra bank charges may apply depending of each player’s branch.",
 					"Payments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
 				]
@@ -59,7 +59,7 @@ const FAQ = (props) => {
 			{
 				title: "Facing any problems?",
 				content: [
-					"Get in touch via the email contactus@pokerload.com and we will contact directly as soon as possible."
+					"Get in touch via the email contactus@pokerload.com and we will contact you directly as soon as possible."
 				]
 			}
 		]);
