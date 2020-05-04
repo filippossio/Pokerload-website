@@ -105,8 +105,8 @@ const App = (props) => {
 						{separator}
 						<a href="/business">Business</a>
 						{separator}
-						<a href="/about-us">About Us</a>
-						{separator}
+						{/* <a href="/about-us">About Us</a>
+						{separator} */}
 						<a href="/faq">FAQ</a>
 						{mobile ? null : separator}
 					</Router>
