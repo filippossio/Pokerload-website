@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { withStyles, useTheme } from '@material-ui/core/styles';
-import { Helmet } from 'react-helmet';
+import { withStyles } from '@material-ui/core/styles';
 import Analytics from './network/analytics/Analytics';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Firebase from './network/Firebase';
-
 import Home from './pages/Home';
 import Business from './pages/Business';
 import AboutUs from './pages/AboutUs';
 import FAQ from './pages/FAQ';
 import TandC from './pages/TandC';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import LayoutPage from './components/LayoutPage/LayoutPage';
 
 const styles = theme => ({
 	navigation: {
@@ -75,8 +73,6 @@ const styles = theme => ({
 });
 
 const App = (props) => {
-	const { classes } = props;
-
 	useEffect(() => {
 		Firebase.initFirebase();
 	}, []);
@@ -84,55 +80,33 @@ const App = (props) => {
 	const pageLoaded = (page) => {
 		Analytics.onVisitPage(page);
 	};
-
-	const theme = useTheme();
-	const mobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-	let separator = <div className={`${classes.verticalLine} ${window.location.pathname !== "/" ? classes.verticalLineDark : ''}`} />;
-
 	return (
-		<div>
-			<Helmet>
-				<title>Pokerload</title>
-				<meta name="description" content="PokerLoad intends to be the main channel found on an internet platform for all poker
-				activities that take place live in real casinos and licensed poker clubs worldwide." />
-			</Helmet>
-			<Router>
-				<nav className={`${classes.navigation} ${window.location.pathname !== "/" ? classes.dark : ''}`}>
-					<Router>
-						{mobile ? null : separator}
-						<a href="/">Home</a>
-						{separator}
-						<a href="/business">Business</a>
-						{separator}
-						{/* <a href="/about-us">About Us</a>
-						{separator} */}
-						<a href="/faq">FAQ</a>
-						{mobile ? null : separator}
-					</Router>
-				</nav>
-				<Switch>
-					<Route path="/terms-and-conditions">
-						<TandC onPageVisit={() => pageLoaded('Terms and Conditions')} />
-					</Route>
-					<Route path="/privacy-policy">
-						<PrivacyPolicy onPageVisit={() => pageLoaded('Privacy Policy')} />
-					</Route>
-					<Route path="/business">
-						<Business onPageVisit={() => pageLoaded('Business')} />
-					</Route>
-					<Route path="/about-us">
-						<AboutUs onPageVisit={() => pageLoaded('About Us')} />
-					</Route>
-					<Route path="/faq">
-						<FAQ onPageVisit={() => pageLoaded('FaQ')} />
-					</Route>
-					<Route path="/">
-						<Home onPageVisit={() => pageLoaded('Home')} />
-					</Route>
-				</Switch>
-			</Router>
-		</div >
+		<>
+			<LayoutPage>
+				<Router>
+					<Switch>
+						<Route path="/terms-and-conditions">
+							<TandC onPageVisit={() => pageLoaded('Terms and Conditions')} />
+						</Route >
+						<Route path="/privacy-policy">
+							<PrivacyPolicy onPageVisit={() => pageLoaded('Privacy Policy')} />
+						</Route>
+						<Route path="/business">
+							<Business onPageVisit={() => pageLoaded('Business')} />
+						</Route>
+						<Route path="/about-us">
+							<AboutUs onPageVisit={() => pageLoaded('About Us')} />
+						</Route>
+						<Route path="/faq">
+							<FAQ onPageVisit={() => pageLoaded('FaQ')} />
+						</Route>
+						<Route path="/">
+							<Home onPageVisit={() => pageLoaded('Home')} />
+						</Route>
+					</Switch >
+				</Router >
+			</LayoutPage>
+		</>
 	);
 };
 export default withStyles(styles)(App);

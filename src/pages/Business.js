@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Pokerload from '../components/Pokerload/Pokerload';
 import Features from '../components/Features/Features';
-import Footer from '../components/Footer/Footer';
 import clientManagment from '../assets/pokerloadIcons/customer_management.svg';
 import serviceDesk from '../assets/pokerloadIcons/service_desk.svg';
 import promoteGame from '../assets/pokerloadIcons/promote_game.svg';
@@ -65,8 +64,6 @@ const Business = (props) => {
 			<Header business />
 			<Pokerload />
 			<Features features={feature} />
-			<Footer />
-			{/* <Copyright /> */}
 		</>
 	);
 };

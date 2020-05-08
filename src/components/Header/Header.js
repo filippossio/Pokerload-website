@@ -1,19 +1,20 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
-import HeroImage from '../../assets/heroImage.png';
 import HeroImageBusiness from '../../assets/gray_background.png';
-import HeroImageMobile from '../../assets/heroImageMobile.png';
-import HeaderLogo from '../../assets/logo.svg';
 import HeaderLogoBusiness from '../../assets/logoBusiness.svg';
 import Grid from '@material-ui/core/Grid';
+// /import HomeHeader from './HomeHeader';
+import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
+import HeroImage from '../../assets/heroImage.png';
+import HeroImageMobile from '../../assets/heroImageMobile.png';
+import HeaderLogo from '../../assets/logo.svg';
 
 const styles = theme => ({
 	header: {
 		fontFamily: 'roboto',
 		textTransform: 'uppercase',
-		height: '100vh',
 		paddingBottom: '20px',
+		height: '100vh',
 	},
 	hero: {
 		height: '100vh',

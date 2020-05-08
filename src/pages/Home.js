@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Features from '../components/Features/Features';
-import Footer from '../components/Footer/Footer';
 import ComingSoon from '../components/ComingSoon/ComingSoon';
 import Pokerload from '../components/Pokerload/Pokerload';
 import location from '../assets/location.svg';
@@ -62,8 +61,6 @@ const Home = (props) => {
 			<Pokerload />
 			<Features features={features} />
 			<ComingSoon />
-			<Footer />
-			{/* <Copyright /> */}
 		</>
 	);
 };
