@@ -1,12 +1,12 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import GrayBackground from '../../assets/gray_background.png';
 import HeaderLogoBusiness from '../../assets/logoBusiness.svg';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import CustomTypography from '../../UI/CustomTypography'
+import CustomTypography from '../../UI/CustomTypography';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	banner: {
 		height: '20%',
 		fontWeight: '500',
@@ -57,11 +57,11 @@ const styles = theme => ({
 	header: {
 		backgroundImage: `url(${GrayBackground})`,
 	},
-});
+}));
 
 
-const header = (props) => {
-	const { classes } = props;
+const Header = () => {
+	const classes = useStyles();
 
 	return (
 		<>
@@ -74,7 +74,7 @@ const header = (props) => {
 						<img src={HeaderLogoBusiness} alt="Pokerload Logo" />
 					</Grid>
 					<Grid item xs={12} md={6}>
-						<CustomTypography variant="h5" py={30} align="center" color="black" fontWeight="bold" fontStyle="italic">"We bring players closer to you"</CustomTypography>
+						<CustomTypography variant="h5" py={30} align="center" color="black" fontWeight="bold" fontStyle="italic">&quot;We bring players closer to you&quot;</CustomTypography>
 						<CustomTypography variant="h5" pb={10} align="center" color="#bb001f" fontWeight="bold">Raise your live game</CustomTypography>
 						<CustomTypography variant="h4" pb={10} align="center" color="black" fontWeight="bold">CRM & Marketing platform</CustomTypography>
 						<CustomTypography variant="h5" pb={10} align="center" color="black" fontWeight="bold">for all licenced poker venues</CustomTypography>
@@ -99,4 +99,4 @@ const header = (props) => {
 	);
 };
 
-export default withStyles(styles)(header);
+export default Header;

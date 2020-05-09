@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
 const TandC = (props) => {
@@ -14,3 +15,7 @@ const TandC = (props) => {
 };
 
 export default TandC;
+
+TandC.propTypes = {
+	onPageVisit: PropTypes.func
+};

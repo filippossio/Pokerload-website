@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -12,7 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import HeaderLogo from '../../assets/logo.svg';
 
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	leftNavigationItems: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -30,10 +30,10 @@ const styles = theme => ({
 		textDecoration: 'none',
 		color: 'unset',
 	}
-});
+}));
 
-const LeftNavigationItems = (props) => {
-	const { classes } = props;
+const LeftNavigationItems = () => {
+	const classes = useStyles();
 
 	return (
 		<div className={classes.leftNavigationItems}>
@@ -71,4 +71,4 @@ const LeftNavigationItems = (props) => {
 	);
 };
 
-export default withStyles(styles)(LeftNavigationItems);
+export default LeftNavigationItems;

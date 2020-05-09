@@ -1,14 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SimpleHeader from '../SimpleHeader/SimpleHeader';
 
-const SimpleTemplate = (props) => {
-	const { title } = props;
+const SimpleTemplate = ({ title, children }) => {
+
 	return (
 		<>
 			<SimpleHeader title={title} />
-			{props.children}
+			{children}
 		</>
 	);
 };
 
 export default SimpleTemplate;
+
+SimpleTemplate.propTypes = {
+	title: PropTypes.string,
+	children: PropTypes.node
+};

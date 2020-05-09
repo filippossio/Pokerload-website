@@ -1,17 +1,19 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Feature from '../Feature/Feature';
 
-const styles = theme => ({
+const useStyles = makeStyles(() => ({
 	container: {
 		display: 'flex',
 		padding: '10px 0',
 	},
-});
+}));
 
-const featuresRow = (props) => {
-	const { classes, features, index } = props;
+const FeaturesRow = (props) => {
+	const { features, index } = props;
+	const classes = useStyles();
 	return (
 		<Container className={classes.container}>
 			<Feature key={index} feature={features[0]} />
@@ -22,4 +24,9 @@ const featuresRow = (props) => {
 	);
 };
 
-export default withStyles(styles)(featuresRow);
+export default FeaturesRow;
+
+FeaturesRow.propTypes = {
+	features: PropTypes.array,
+	index: PropTypes.number
+};

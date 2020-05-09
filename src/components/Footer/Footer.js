@@ -1,6 +1,6 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
 import facebookSVG from '../../assets/facebook.svg';
 import instagramSvg from '../../assets/instagram.svg';
 import twitterSvg from '../../assets/twitter.svg';
@@ -9,35 +9,35 @@ import NewsletterSignUp from '../NewsletterSignUp/NewsletterSignUp';
 import Copyright from './Copyright';
 
 
-const useStyles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	footer: {
 		flexGrow: 1,
-		backgroundColor: "#606060",
+		backgroundColor: '#606060',
 
-		padding: "10px 0px",
+		padding: '10px 0px',
 	},
 	coloumn: {
-		padding: "10px 80px",
+		padding: '10px 80px',
 		paddingBottom: '40px',
 		[theme.breakpoints.up('md')]: {
-			borderRight: "2px solid white",
+			borderRight: '2px solid white',
 			paddingBottom: '10px',
-			"&:last-child": {
-				borderRight: "none",
+			'&:last-child': {
+				borderRight: 'none',
 			},
 		},
 	},
 	row: {
-		color: "white",
-		display: "flex",
+		color: 'white',
+		display: 'flex',
 	},
 	heading: {
-		fontSize: "25px",
-		lineHeight: "30px",
-		color: "white",
-		marginBottom: "10px",
-		fontFamily: "Roboto",
-		fontWeight: "bold",
+		fontSize: '25px',
+		lineHeight: '30px',
+		color: 'white',
+		marginBottom: '10px',
+		fontFamily: 'Roboto',
+		fontWeight: 'bold',
 		display: 'block',
 		marginBlockStart: '0.83em',
 		marginBlockEnd: '0.83em',
@@ -48,11 +48,11 @@ const useStyles = theme => ({
 		},
 	},
 	p: {
-		margin: "0 0",
-		fontSize: "15px",
-		lineHeight: "19px",
-		fontFamily: "Roboto",
-		width: "100%",
+		margin: '0 0',
+		fontSize: '15px',
+		lineHeight: '19px',
+		fontFamily: 'Roboto',
+		width: '100%',
 		color: 'white',
 		textDecoration: 'none',
 		[theme.breakpoints.down('sm')]: {
@@ -60,25 +60,25 @@ const useStyles = theme => ({
 		},
 	},
 	pUppercase: {
-		textTransform: "uppercase",
+		textTransform: 'uppercase',
 	},
 	horizontalLine: {
-		borderTop: "1px solid white",
-		width: "100%",
+		borderTop: '1px solid white',
+		width: '100%',
 	},
 	horizontalLineMobile: {
-		borderTop: "1px solid white",
-		width: "90%",
+		borderTop: '1px solid white',
+		width: '90%',
 		[theme.breakpoints.up('md')]: {
 			display: 'none',
 		}
 
 	},
-});
+}));
 
 
-const footer = (props) => {
-	const { classes } = props;
+const Footer = () => {
+	const classes = useStyles();
 
 	return (
 		<>
@@ -133,4 +133,4 @@ const footer = (props) => {
 	);
 };
 
-export default withStyles(useStyles)(footer);
+export default Footer;
