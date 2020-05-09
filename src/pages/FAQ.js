@@ -40,8 +40,14 @@ const FAQ = (props) => {
 				title: "What and how do we charge for our services?",
 				content: [
 					"For every new game checked-in, there will be a minimum of 1.2% and a maximum of 3.6% charge based on the amount buy-in. The higher the amount the lower the percentage charged.",
-					"Extra bank charges may apply depending of each player’s branch.",
+					"Extra bank charges may apply depending on each player’s branch.",
 					"Payments using foreign bank cards will have a currency conversion to the Casino’s operating currency."
+				]
+			},
+			{
+				title: "Is there any Refund Policy?",
+				content: [
+					"Yes, if you have already booked and paid for your sit at a table but for any reason you did not make it to reach out to the actual casino in the given timeframe, your buy-in amount will be automatically returned to your bank account. In addition, we would like to inform you that any other charges applied to the total amount such us bank charges and Pokerload service fee will be retained."
 				]
 			},
 			{
