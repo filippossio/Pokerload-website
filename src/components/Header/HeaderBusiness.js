@@ -1,11 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GrayBackground from '../../assets/gray_background.png';
+import HeaderLogoBusiness from '../../assets/logoBusiness.svg';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import CustomTypography from '../../UI/CustomTypography'
-import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
-import HeaderLogo from '../../assets/logo.svg';
 
 const styles = theme => ({
 	banner: {
@@ -48,6 +47,13 @@ const styles = theme => ({
 			height: '15%',
 		},
 	},
+	mailTo: {
+		textDecoration: 'underline',
+		color: 'white',
+		'&:hover': {
+			color: 'gray',
+		}
+	},
 	header: {
 		backgroundImage: `url(${GrayBackground})`,
 	},
@@ -64,25 +70,29 @@ const header = (props) => {
 					container
 					direction="row"
 					alignItems="center">
-					<Grid item md={6}>
-						<img src={HeaderLogo} alt="Pokerload Logo" />
+					<Grid item xs={12} md={6}>
+						<img src={HeaderLogoBusiness} alt="Pokerload Logo" />
 					</Grid>
 					<Grid item xs={12} md={6}>
-						<CustomTypography variant="h5" pb={10} align="center" color="#bb001f" fontWeight="bold">Live Games at your fingertips</CustomTypography>
-						<CustomTypography variant="h3" pb={10} align="center" color="black" fontWeight="bold">Book & Buy-in</CustomTypography>
-						<CustomTypography variant="h4" pb={10} align="center" color="black" fontWeight="bold">in just a few clicks</CustomTypography>
-						<CustomTypography variant="h6" pb={10} align="center" color="#bb001f" fontWeight="bold">Join our newsletter</CustomTypography>
-						<SignUpModal />
-						<CustomTypography variant="subtitle1" align="center" color="black" fontWeight="bold">Must be 21+ years old to sign up</CustomTypography>
+						<CustomTypography variant="h5" py={30} align="center" color="black" fontWeight="bold" fontStyle="italic">"We bring players closer to you"</CustomTypography>
+						<CustomTypography variant="h5" pb={10} align="center" color="#bb001f" fontWeight="bold">Raise your live game</CustomTypography>
+						<CustomTypography variant="h4" pb={10} align="center" color="black" fontWeight="bold">CRM & Marketing platform</CustomTypography>
+						<CustomTypography variant="h5" pb={10} align="center" color="black" fontWeight="bold">for all licenced poker venues</CustomTypography>
+						<CustomTypography variant="h6" pt={20} pb={10} align="center" color="#bb001f" fontWeight="bold">for more info contact us</CustomTypography>
+						<CustomTypography variant="subtitle1" align="center" color="black" fontWeight="bold">at <a className={classes.mailTo}
+							style={{ color: 'black' }}
+							target="_blank"
+							href=" mailto:Business@pokerload.com?subject=Mail from Our Business Site">
+							Business@pokerload.com</a></CustomTypography>
 					</Grid>
 				</Grid>
 			</Box >
 			<div className={classes.banner}>
 				<Grid container>
-					<Grid item sm={3}>1. Download App</Grid>
-					<Grid item sm={3}>2. Register</Grid>
-					<Grid item sm={3}>3. Find game</Grid>
-					<Grid item sm={3}>4. Book in</Grid>
+					<Grid item sm={3}>Promote</Grid>
+					<Grid item sm={3}>Organise</Grid>
+					<Grid item sm={3}>Monitor</Grid>
+					<Grid item sm={3}>Automate</Grid>
 				</Grid>
 			</div>
 		</>

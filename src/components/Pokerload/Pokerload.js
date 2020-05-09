@@ -10,6 +10,7 @@ const styles = theme => ({
 		flexFlow: 'column',
 		alignItems: 'center',
 		fontFamily: 'roboto',
+		paddingTop: '10px'
 	},
 	header: {
 		fontSize: '25px',

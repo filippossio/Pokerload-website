@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header/Header';
+import HeaderBusiness from '../components/Header/HeaderBusiness';
 import Pokerload from '../components/Pokerload/Pokerload';
 import Features from '../components/Features/Features';
 import clientManagment from '../assets/pokerloadIcons/customer_management.svg';
@@ -61,7 +61,7 @@ const Business = (props) => {
 
 	return (
 		<>
-			<Header business />
+			<HeaderBusiness />
 			<Pokerload />
 			<Features features={feature} />
 		</>
