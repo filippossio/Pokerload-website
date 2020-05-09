@@ -70,7 +70,7 @@ const Header = () => {
 					container
 					direction="row"
 					alignItems="center">
-					<Grid item xs={12} md={6}>
+					<Grid item md={6}>
 						<img src={HeaderLogoBusiness} alt="Pokerload Logo" />
 					</Grid>
 					<Grid item xs={12} md={6}>
@@ -86,15 +86,7 @@ const Header = () => {
 							Business@pokerload.com</a></CustomTypography>
 					</Grid>
 				</Grid>
-			</Box >
-			<div className={classes.banner}>
-				<Grid container>
-					<Grid item sm={3}>Promote</Grid>
-					<Grid item sm={3}>Organise</Grid>
-					<Grid item sm={3}>Monitor</Grid>
-					<Grid item sm={3}>Automate</Grid>
-				</Grid>
-			</div>
+			</Box>
 		</>
 	);
 };

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import HeaderBusiness from '../components/Header/HeaderBusiness';
 import Pokerload from '../components/Pokerload/Pokerload';
+import Banner from '../components/Banner';
 import Features from '../components/Features/Features';
 import clientManagment from '../assets/pokerloadIcons/customer_management.svg';
 import serviceDesk from '../assets/pokerloadIcons/service_desk.svg';
@@ -16,7 +17,7 @@ import casinoServices from '../assets/pokerloadIcons/casino_services.svg';
 
 const Business = (props) => {
 	const { onPageVisit } = props;
-	const [feature] = useState([
+	const feature = [
 		{
 			name: 'Client Management',
 			description: 'Gain live status and management of the daily tables and attendants.',
@@ -54,7 +55,9 @@ const Business = (props) => {
 			description: 'Advertise and sell your exclusive services through Pokerload\'s customer loyalty rewards system.',
 			icon: casinoServices,
 		},
-	]);
+	];
+
+	const bannerItems = ['Promote', 'Organise', 'Monitor', 'Automate'];
 
 	useEffect(() => {
 		onPageVisit();
@@ -63,6 +66,7 @@ const Business = (props) => {
 	return (
 		<>
 			<HeaderBusiness />
+			<Banner items={bannerItems} />
 			<Pokerload />
 			<Features features={feature} />
 		</>

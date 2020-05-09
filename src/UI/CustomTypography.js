@@ -23,7 +23,7 @@ const CustomTypography = (props) => {
 	const classes = useStyles(props);
 
 	return (
-		<Typography variant={props.variant} align={props.align} className={`${classes.typography}`} >{props.children}</Typography>
+		<Typography variant={props.variant} noWrap={props.noWrap} align={props.align} className={`${classes.typography}`} >{props.children}</Typography>
 	);
 };
 export default CustomTypography;
@@ -31,5 +31,6 @@ export default CustomTypography;
 CustomTypography.propTypes = {
 	variant: PropTypes.string,
 	align: PropTypes.string,
-	children: PropTypes.node
+	children: PropTypes.node,
+	noWrap: PropTypes.bool,
 };
