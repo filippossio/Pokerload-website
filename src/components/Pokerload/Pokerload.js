@@ -47,4 +47,4 @@ const pokerload = (props) => {
 	);
 };
 
-export default withStyles(styles)(pokerload);;
+export default withStyles(styles)(pokerload);

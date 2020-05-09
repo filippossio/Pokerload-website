@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Analytics from './network/analytics/Analytics';
 import Firebase from './network/Firebase';
@@ -72,7 +72,7 @@ const styles = theme => ({
 	}
 });
 
-const App = (props) => {
+const App = () => {
 	useEffect(() => {
 		Firebase.initFirebase();
 	}, []);

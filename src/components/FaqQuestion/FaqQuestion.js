@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Container } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import favicon from '../../assets/favicon.ico'
+import favicon from '../../assets/favicon.ico';
 
 
 const styles = theme => ({

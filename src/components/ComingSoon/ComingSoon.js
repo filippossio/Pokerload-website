@@ -12,13 +12,13 @@ const styles = theme => ({
 		justifyContent: 'center',
 	},
 	coloumn: {
-		padding: "0 80px",
+		padding: '0 80px',
 	},
 	pBold: {
-		fontWeight: "bold",
+		fontWeight: 'bold',
 	},
 	pUppercase: {
-		textTransform: "uppercase",
+		textTransform: 'uppercase',
 	},
 	text: {
 		fontSize: '2.25rem',

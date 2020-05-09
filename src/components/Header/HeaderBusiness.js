@@ -4,7 +4,7 @@ import GrayBackground from '../../assets/gray_background.png';
 import HeaderLogoBusiness from '../../assets/logoBusiness.svg';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import CustomTypography from '../../UI/CustomTypography'
+import CustomTypography from '../../UI/CustomTypography';
 
 const styles = theme => ({
 	banner: {

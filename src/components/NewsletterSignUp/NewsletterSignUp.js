@@ -6,12 +6,12 @@ import { TextField, Button } from '@material-ui/core';
 
 const styles = theme => ({
 	heading: {
-		fontSize: "25px",
-		lineHeight: "30px",
-		color: "white",
-		marginBottom: "10px",
-		fontFamily: "Roboto",
-		fontWeight: "bold",
+		fontSize: '25px',
+		lineHeight: '30px',
+		color: 'white',
+		marginBottom: '10px',
+		fontFamily: 'Roboto',
+		fontWeight: 'bold',
 		display: 'block',
 		marginBlockStart: '0.83em',
 		marginBlockEnd: '0.83em',
@@ -28,15 +28,15 @@ const styles = theme => ({
 		}
 	},
 	horizontalLine: {
-		borderTop: "1px solid white",
-		width: "100%",
+		borderTop: '1px solid white',
+		width: '100%',
 	},
 	submittedBody: {
 		display: 'flex',
 		width: '100%'
 	},
 	checkIcon: {
-		color: "white",
+		color: 'white',
 		height: '100px',
 		width: '100%',
 
@@ -55,21 +55,21 @@ const styles = theme => ({
 		float: 'right'
 	},
 	p: {
-		margin: "0 0",
-		fontSize: "15px",
-		lineHeight: "19px",
-		fontFamily: "Roboto",
-		width: "100%",
+		margin: '0 0',
+		fontSize: '15px',
+		lineHeight: '19px',
+		fontFamily: 'Roboto',
+		width: '100%',
 		color: 'white',
 		textDecoration: 'none',
 		paddingBottom: '20px',
 	},
 	pSubscribed: {
-		margin: "0 0",
-		fontSize: "15px",
-		lineHeight: "19px",
-		fontFamily: "Roboto",
-		width: "100%",
+		margin: '0 0',
+		fontSize: '15px',
+		lineHeight: '19px',
+		fontFamily: 'Roboto',
+		width: '100%',
 		color: 'white',
 		textDecoration: 'none',
 		paddingBottom: '20px',
@@ -120,13 +120,13 @@ const NewsletterSignUp = (props) => {
 						}}
 						InputLabelProps={{
 							style: {
-								color: "white", //Placeholder
+								color: 'white', //Placeholder
 							}
 						}}
 					/>
 					<Button type="submit" color="primary" className={classes.subscribeBtn}>
 						Subscribe
-                    </Button>
+					</Button>
 				</form>
 			</div>
 		</>

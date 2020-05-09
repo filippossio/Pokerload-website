@@ -6,19 +6,19 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
 	copyright: {
 		flexGrow: 1,
-		height: "20px",
+		height: '20px',
 	},
 	coloumn: {
-		padding: "0 80px",
+		padding: '0 80px',
 		[theme.breakpoints.down('sm')]: {
-			padding: "0",
+			padding: '0',
 		},
 
 	},
 	p: {
-		margin: "0",
-		textTransform: "uppercase",
-		fontFamily: "Roboto",
+		margin: '0',
+		textTransform: 'uppercase',
+		fontFamily: 'Roboto',
 		color: 'black',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '0.75rem',
@@ -26,7 +26,7 @@ const styles = theme => ({
 		},
 	},
 	pBold: {
-		fontWeight: "bold",
+		fontWeight: 'bold',
 	},
 	pUnderline: {
 		textDecoration: 'underline',
