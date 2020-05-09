@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import FaqQuestion from '../components/FaqQuestion/FaqQuestion';
 import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
-const styles = theme => ({
+const useStyles = makeStyles(() => ({
 	questions: {
 		padding: '20px 0'
 	}
-});
-
-
+}));
 
 const FAQ = (props) => {
-	const { classes, onPageVisit } = props;
+	const { onPageVisit } = props;
+	const classes = useStyles();
+
 	const [faqData] = useState(
 		[
 			{
@@ -87,4 +88,8 @@ const FAQ = (props) => {
 	);
 };
 
-export default withStyles(styles)(FAQ);
+export default FAQ;
+
+FAQ.propTypes = {
+	onPageVisit: PropTypes.func
+};

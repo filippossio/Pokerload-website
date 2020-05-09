@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -26,3 +27,9 @@ const CustomTypography = (props) => {
 	);
 };
 export default CustomTypography;
+
+CustomTypography.propTypes = {
+	variant: PropTypes.string,
+	align: PropTypes.string,
+	children: PropTypes.node
+};

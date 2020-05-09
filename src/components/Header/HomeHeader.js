@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import GrayBackground from '../../assets/gray_background.png';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -7,7 +7,7 @@ import CustomTypography from '../../UI/CustomTypography';
 import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
 import HeaderLogo from '../../assets/logo.svg';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	banner: {
 		height: '20%',
 		fontWeight: '500',
@@ -51,11 +51,11 @@ const styles = theme => ({
 	header: {
 		backgroundImage: `url(${GrayBackground})`,
 	},
-});
+}));
 
 
-const header = (props) => {
-	const { classes } = props;
+const HomeHeader = () => {
+	const classes = useStyles();
 
 	return (
 		<>
@@ -89,4 +89,4 @@ const header = (props) => {
 	);
 };
 
-export default withStyles(styles)(header);
+export default HomeHeader;

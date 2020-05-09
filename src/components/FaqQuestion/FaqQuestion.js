@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography, Container } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import favicon from '../../assets/favicon.ico';
 
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	faqQuestionCont: {
 		paddingBottom: '25px',
 	},
@@ -37,10 +38,11 @@ const styles = theme => ({
 			margin: '0'
 		}
 	}
-});
+}));
 
 const FaqQuestion = (props) => {
-	const { question, classes } = props;
+	const { question } = props;
+	const classes = useStyles();
 	let content = [];
 	if (question.content.length > 1) {
 		const list = question.content.map((element, index) => {
@@ -61,4 +63,8 @@ const FaqQuestion = (props) => {
 	);
 };
 
-export default withStyles(styles)(FaqQuestion);
+export default FaqQuestion;
+
+FaqQuestion.propTypes = {
+	question: PropTypes.object
+};

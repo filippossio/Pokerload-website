@@ -1,10 +1,10 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import icon from '../../assets/pokerload-icons.svg';
 
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	section: {
 		display: 'flex',
 		flexFlow: 'column',
@@ -32,10 +32,10 @@ const styles = theme => ({
 			fontSize: '15px',
 		},
 	}
-});
+}));
 
-const pokerload = (props) => {
-	const { classes } = props;
+const Pokerload = () => {
+	const classes = useStyles();
 	return (
 		<Container maxWidth='sm' className={classes.section}>
 			<img className={classes.icon} src={icon} alt="" />
@@ -47,4 +47,4 @@ const pokerload = (props) => {
 	);
 };
 
-export default withStyles(styles)(pokerload);
+export default Pokerload;

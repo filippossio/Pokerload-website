@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,7 +11,7 @@ import Drawer from '@material-ui/core/Drawer';
 import LeftNavigationItems from './LeftNavigationItems';
 import Hidden from '@material-ui/core/Hidden';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
@@ -40,7 +40,7 @@ const styles = theme => ({
 	list: {
 		width: 250,
 	},
-});
+}));
 
 function ElevationScroll(props) {
 	const { children, window } = props;
@@ -56,7 +56,7 @@ function ElevationScroll(props) {
 }
 
 const Navigation = (props) => {
-	const { classes } = props;
+	const classes = useStyles();
 	const [leftNav, setLeftNav] = React.useState(false);
 
 	const toggleDrawer = (open) => (event) => {
@@ -104,4 +104,4 @@ const Navigation = (props) => {
 	);
 };
 
-export default withStyles(styles)(Navigation);
+export default Navigation;

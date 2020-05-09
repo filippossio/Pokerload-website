@@ -62,6 +62,17 @@ module.exports = {
 		'semi': [
 			'error',
 			'always'
-		]
+		],
+		'no-multiple-empty-lines': [
+			2,
+			{
+				'max': 2,
+				'maxEOF': 0,
+				'maxBOF': 0
+			}
+		],
+		'eol-last': [
+			'error',
+			'always'],
 	}
 };

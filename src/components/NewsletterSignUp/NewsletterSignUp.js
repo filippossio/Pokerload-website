@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Firebase from '../../network/Firebase';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import CheckIcon from '@material-ui/icons/Check';
 import { TextField, Button } from '@material-ui/core';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	heading: {
 		fontSize: '25px',
 		lineHeight: '30px',
@@ -75,10 +75,10 @@ const styles = theme => ({
 		paddingBottom: '20px',
 		textAlign: 'center'
 	}
-});
+}));
 
-const NewsletterSignUp = (props) => {
-	const { classes } = props;
+const NewsletterSignUp = () => {
+	const classes = useStyles();
 	const [email, setEmail] = useState('');
 	const [submitted, setSubmitted] = useState(null);
 
@@ -140,4 +140,4 @@ const NewsletterSignUp = (props) => {
 	);
 };
 
-export default withStyles(styles)(NewsletterSignUp);
+export default NewsletterSignUp;

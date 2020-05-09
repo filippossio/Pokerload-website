@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import HeaderBusiness from '../components/Header/HeaderBusiness';
 import Pokerload from '../components/Pokerload/Pokerload';
 import Features from '../components/Features/Features';
@@ -69,3 +70,7 @@ const Business = (props) => {
 };
 
 export default Business;
+
+Business.propTypes = {
+	onPageVisit: PropTypes.func
+};

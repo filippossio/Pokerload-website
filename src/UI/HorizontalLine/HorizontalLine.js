@@ -1,13 +1,6 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
-	'hr': {
-		borderTop: '1px solid #000000',
-	},
-});
-
-const horizontalLine = () => {
+const HorizontalLine = () => {
 	return (
 		<div>
 			<hr />
@@ -15,4 +8,4 @@ const horizontalLine = () => {
 	);
 };
 
-export default withStyles(styles)(horizontalLine);
+export default HorizontalLine;

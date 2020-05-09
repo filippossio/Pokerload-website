@@ -30,11 +30,11 @@ const Firebase = {
 					db.collection('Maillist').add({
 						email: email,
 					})
-						.then(function (docRef) {
+						.then(function () {
 							console.log('email added and resolved');
 							resolve();
 						})
-						.catch(function (error) {
+						.catch(function () {
 							console.log('email NOT added and rejected');
 							reject();
 						});

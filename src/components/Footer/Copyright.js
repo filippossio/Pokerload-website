@@ -1,9 +1,8 @@
 import React from 'react';
-
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	copyright: {
 		flexGrow: 1,
 		height: '20px',
@@ -35,10 +34,10 @@ const styles = theme => ({
 	pGray: {
 		color: '#9e9e9e'
 	}
-});
+}));
 
-const copyright = (props) => {
-	const { classes } = props;
+const Copyright = () => {
+	const classes = useStyles();
 	return (
 		<section className={classes.copyright}>
 			<Grid container>
@@ -56,4 +55,4 @@ const copyright = (props) => {
 	);
 };
 
-export default withStyles(styles)(copyright);
+export default Copyright;

@@ -1,6 +1,6 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
 import facebookSVG from '../../assets/facebook.svg';
 import instagramSvg from '../../assets/instagram.svg';
 import twitterSvg from '../../assets/twitter.svg';
@@ -9,7 +9,7 @@ import NewsletterSignUp from '../NewsletterSignUp/NewsletterSignUp';
 import Copyright from './Copyright';
 
 
-const useStyles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	footer: {
 		flexGrow: 1,
 		backgroundColor: '#606060',
@@ -74,11 +74,11 @@ const useStyles = theme => ({
 		}
 
 	},
-});
+}));
 
 
-const footer = (props) => {
-	const { classes } = props;
+const Footer = () => {
+	const classes = useStyles();
 
 	return (
 		<>
@@ -133,4 +133,4 @@ const footer = (props) => {
 	);
 };
 
-export default withStyles(useStyles)(footer);
+export default Footer;

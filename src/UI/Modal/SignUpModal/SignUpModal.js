@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import Box from '@material-ui/core/Box';
 import NewsletterSignUp from '../../../components/NewsletterSignUp/NewsletterSignUp';
@@ -8,7 +8,7 @@ import { Container } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	signUpBtn: {
 		width: '200px',
 		height: '50px',
@@ -52,10 +52,10 @@ const styles = theme => ({
 			height: '250px'
 		}
 	}
-});
+}));
 
-const SignUpModal = (props) => {
-	const { classes } = props;
+const SignUpModal = () => {
+	const classes = useStyles();
 	const [open, setOpen] = useState(false);
 
 	const theme = useTheme();
@@ -88,4 +88,4 @@ const SignUpModal = (props) => {
 	);
 };
 
-export default withStyles(styles)(SignUpModal);
+export default SignUpModal;

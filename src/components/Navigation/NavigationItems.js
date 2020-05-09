@@ -1,16 +1,16 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const styles = theme => ({
+const useStyles = makeStyles(() => ({
 	a: {
 		textDecoration: 'none',
 		color: 'black',
 	},
-});
+}));
 
-const NavigationItems = (props) => {
-	const { classes } = props;
+const NavigationItems = () => {
+	const classes = useStyles();
 
 	return (
 		<>
@@ -30,4 +30,4 @@ const NavigationItems = (props) => {
 	);
 };
 
-export default withStyles(styles)(NavigationItems);
+export default NavigationItems;

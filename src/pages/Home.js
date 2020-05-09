@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import HomeHeader from '../components/Header/HomeHeader';
 import Features from '../components/Features/Features';
 import ComingSoon from '../components/ComingSoon/ComingSoon';
@@ -66,3 +67,7 @@ const Home = (props) => {
 };
 
 export default Home;
+
+Home.propTypes = {
+	onPageVisit: PropTypes.func
+};
