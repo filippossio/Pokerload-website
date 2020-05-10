@@ -1,17 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SimpleHeader from '../SimpleHeader/SimpleHeader';
-import Footer from '../Footer/Footer';
 
-const SimpleTemplate = (props) => {
-	const { title } = props;
+const SimpleTemplate = ({ title, children }) => {
+
 	return (
 		<>
 			<SimpleHeader title={title} />
-			{props.children}
-			<Footer />
-			{/* <Copyright /> */}
+			{children}
 		</>
 	);
 };
 
 export default SimpleTemplate;
+
+SimpleTemplate.propTypes = {
+	title: PropTypes.string,
+	children: PropTypes.node
+};

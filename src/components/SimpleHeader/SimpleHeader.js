@@ -1,7 +1,8 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	hero: {
 		height: '30vh',
 		width: '100vw',
@@ -21,10 +22,11 @@ const styles = theme => ({
 			fontSize: '2rem',
 		}
 	}
-});
+}));
 
-const SimpleHeader = (props) => {
-	const { classes, title } = props;
+const SimpleHeader = ({ title }) => {
+	const classes = useStyles();
+
 	return (
 		<header>
 			<div alt="" className={classes.hero}>
@@ -34,4 +36,8 @@ const SimpleHeader = (props) => {
 	);
 };
 
-export default withStyles(styles)(SimpleHeader);
+export default SimpleHeader;
+
+SimpleHeader.propTypes = {
+	title: PropTypes.string
+};

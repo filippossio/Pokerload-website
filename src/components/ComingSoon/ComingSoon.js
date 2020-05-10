@@ -1,8 +1,7 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { withStyles } from '@material-ui/core/styles';
-
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	comingSoon: {
 		flexGrow: 1,
 		height: '100px',
@@ -12,13 +11,13 @@ const styles = theme => ({
 		justifyContent: 'center',
 	},
 	coloumn: {
-		padding: "0 80px",
+		padding: '0 80px',
 	},
 	pBold: {
-		fontWeight: "bold",
+		fontWeight: 'bold',
 	},
 	pUppercase: {
-		textTransform: "uppercase",
+		textTransform: 'uppercase',
 	},
 	text: {
 		fontSize: '2.25rem',
@@ -35,14 +34,11 @@ const styles = theme => ({
 		margin: 'auto',
 		padding: '10px 10px',
 		textAlign: 'center',
-		'& img': {
-			// height: '60px',
-		}
 	}
-});
+}));
 
-const comingSoon = (props) => {
-	const { classes } = props;
+const ComingSoon = () => {
+	const classes = useStyles();
 	return (
 		<section className={classes.comingSoon}>
 			<h2 className={`${classes.text} ${classes.pUppercase}`}>
@@ -52,5 +48,4 @@ const comingSoon = (props) => {
 	);
 };
 
-// <img src={appStoreSvg} alt="" /> and <img src={playStoreSvg} alt="" />
-export default withStyles(styles)(comingSoon);
+export default ComingSoon;

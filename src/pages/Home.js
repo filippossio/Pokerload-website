@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Header from '../components/Header/Header';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import HeaderHome from '../components/Header/HeaderHome';
 import Features from '../components/Features/Features';
-import Footer from '../components/Footer/Footer';
 import ComingSoon from '../components/ComingSoon/ComingSoon';
 import Pokerload from '../components/Pokerload/Pokerload';
+import Banner from '../components/Banner';
 import location from '../assets/location.svg';
 import calendar from '../assets/calendar.svg';
 import payment from '../assets/payment.svg';
@@ -15,7 +16,7 @@ import loyalty from '../assets/loyalty.svg';
 
 const Home = (props) => {
 	const { onPageVisit } = props;
-	const [features] = useState([
+	const features = [
 		{
 			name: 'find a game near you',
 			description: 'Jump long registration queues, earn your early bird hustle-free and find a game of your preference.',
@@ -50,7 +51,9 @@ const Home = (props) => {
 			description: 'Request a taxi at your current location for your chosen destination directly through the app.',
 			icon: taxi,
 		},
-	]);
+	];
+
+	const bannerItems = ['1. Download App', '2. Register', '3. Find game', '4. Book in'];
 
 	useEffect(() => {
 		onPageVisit();
@@ -58,14 +61,17 @@ const Home = (props) => {
 
 	return (
 		<>
-			<Header />
+			<HeaderHome />
+			<Banner items={bannerItems} />
 			<Pokerload />
 			<Features features={features} />
 			<ComingSoon />
-			<Footer />
-			{/* <Copyright /> */}
 		</>
 	);
 };
 
 export default Home;
+
+Home.propTypes = {
+	onPageVisit: PropTypes.func
+};

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
 const AboutUs = (props) => {
@@ -14,3 +15,7 @@ const AboutUs = (props) => {
 };
 
 export default AboutUs;
+
+AboutUs.propTypes = {
+	onPageVisit: PropTypes.func
+};

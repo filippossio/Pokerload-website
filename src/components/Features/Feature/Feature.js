@@ -1,8 +1,9 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
 	container: {
 		display: 'flex',
 		flexFlow: 'column',
@@ -35,10 +36,11 @@ const styles = theme => ({
 			height: '60px'
 		},
 	}
-});
+}));
 
-const feature = (props) => {
-	const { classes, feature } = props;
+const Feature = (props) => {
+	const { feature } = props;
+	const classes = useStyles();
 	return (
 		<Container className={classes.container}>
 			<img className={classes.icon} src={feature.icon} alt="" />
@@ -48,4 +50,8 @@ const feature = (props) => {
 	);
 };
 
-export default withStyles(styles)(feature);
+export default Feature;
+
+Feature.propTypes = {
+	feature: PropTypes.object
+};

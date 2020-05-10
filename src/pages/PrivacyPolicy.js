@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SimpleTemplate from '../components/SimpleTemplate/SimpleTemplate';
 
 const PrivacyPolicy = (props) => {
@@ -14,3 +15,7 @@ const PrivacyPolicy = (props) => {
 };
 
 export default PrivacyPolicy;
+
+PrivacyPolicy.propTypes = {
+	onPageVisit: PropTypes.func
+};
