@@ -20,9 +20,9 @@ const NavigationItems = () => {
 			<a href="/business" className={classes.a}>
 				<Button color="inherit">Business</Button>
 			</a>
-			<a href="/about-us" className={classes.a}>
+			{/* <a href="/about-us" className={classes.a}>
 				<Button color="inherit">About us</Button>
-			</a>
+			</a> */}
 			<a href="/faq" className={classes.a}>
 				<Button color="inherit">FAQ</Button>
 			</a>

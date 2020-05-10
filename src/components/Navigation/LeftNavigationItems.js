@@ -6,7 +6,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import BusinessIcon from '@material-ui/icons/Business';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
-import PeopleIcon from '@material-ui/icons/People';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import HeaderLogo from '../../assets/logo.svg';
@@ -60,12 +59,12 @@ const LeftNavigationItems = () => {
 						<ListItemText primary="FAQ" />
 					</ListItem>
 				</a>
-				<a href="about-us" className={classes.a}>
+				{/* <a href="about-us" className={classes.a}>
 					<ListItem button key="About Us">
 						<ListItemIcon><PeopleIcon /></ListItemIcon>
 						<ListItemText primary="About Us" />
 					</ListItem>
-				</a>
+				</a> */}
 			</List>
 		</div>
 	);
