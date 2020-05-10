@@ -7,10 +7,19 @@ import CustomTypography from '../../UI/CustomTypography';
 import SignUpModal from '../../UI/Modal/SignUpModal/SignUpModal';
 import HeaderLogo from '../../assets/logo.svg';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	header: {
 		backgroundImage: `url(${GrayBackground})`,
 	},
+	logo: {
+		margin: '0 50px',
+		[theme.breakpoints.up('lg')]: {
+			margin: '0 100px',
+		},
+		[theme.breakpoints.up('xl')]: {
+			margin: '0 150px',
+		}
+	}
 }));
 
 
@@ -25,7 +34,7 @@ const HeaderHome = () => {
 					direction="row"
 					alignItems="center">
 					<Grid item md={6}>
-						<img src={HeaderLogo} alt="Pokerload Logo" />
+						<img src={HeaderLogo} alt="Pokerload Logo" className={classes.logo} />
 					</Grid>
 					<Grid item xs={12} md={6}>
 						<CustomTypography variant="h5" pb={10} align="center" color="#bb001f" fontWeight="bold">Live Games at your fingertips</CustomTypography>
