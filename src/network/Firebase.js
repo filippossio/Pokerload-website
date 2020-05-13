@@ -6,14 +6,14 @@ const Firebase = {
 	initFirebase() {
 		if (!firebase.apps.length) {
 			var firebaseConfig = {
-				apiKey: 'AIzaSyA2NSlCTS4uiIKBI7e-yRvuMisCTQai2PU',
-				authDomain: 'pokerload.firebaseapp.com',
-				databaseURL: 'https://pokerload.firebaseio.com',
-				projectId: 'pokerload',
-				storageBucket: '',
-				messagingSenderId: '712812382202',
-				appId: '1:712812382202:web:2d120497bc5072a5838643',
-				measurementId: 'G-W8KLZQQFWS',
+				apiKey: process.env.REACT_APP_FIREBASE_KEY,
+				authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+				databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+				projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+				storageBucket: process.env.REACT_APP_FIREBASE_STORAGE,
+				messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+				appId: process.env.REACT_APP_FIREBASE_APP_ID,
+				measurementId: process.env.REACT_APP_FIREBASE_MEASURMENT_ID,
 			};
 			firebase.initializeApp(firebaseConfig);
 		}
