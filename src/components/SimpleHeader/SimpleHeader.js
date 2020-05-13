@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
 	hero: {
-		height: '30vh',
+		height: '20vh',
 		width: '100vw',
 		backgroundImage: 'linear-gradient(to top, #d8d8d8, white)',
 		display: 'flex',
